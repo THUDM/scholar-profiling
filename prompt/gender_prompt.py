@@ -4,7 +4,7 @@
 import os
 
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID" 
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"  # 设置当前使用的GPU设备
+# os.environ["CUDA_VISIBLE_DEVICES"] = "0"  # 设置当前使用的GPU设备
 
 import torch
 import torch.nn as nn
@@ -304,11 +304,11 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--seed', type=int, default=2022, help="random seed for initialization")
     parser.add_argument('--ex_index', type=str, default="prompt-gender")
-    parser.add_argument('--epoch_num', type=int, default=20, help="number of epochs")
+    parser.add_argument('--epoch_num', type=int, default=100, help="number of epochs")
     parser.add_argument('--weight_decay', default=0.0, type=float)
     parser.add_argument('--max_grad_norm', default=1.0, type=float)
     parser.add_argument('--min_num', default=1e-5, type=float)
-    parser.add_argument('--learning_rate', default=1e-2, type=float)
+    parser.add_argument('--learning_rate', default=1e-5, type=float)
     parser.add_argument('--warmup', default=0.0, type=float)
 
     args = parser.parse_args()
