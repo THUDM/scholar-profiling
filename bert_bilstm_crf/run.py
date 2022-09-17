@@ -4,7 +4,7 @@
 import os
 
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID" 
-os.environ["CUDA_VISIBLE_DEVICES"] = "0" 
+# os.environ["CUDA_VISIBLE_DEVICES"] = "0" 
 
 import torch
 import torch.nn as nn
@@ -100,7 +100,7 @@ def train(args):
 
     
     # train_data = json.load(open(r'/home/chenyelin/BILSTM_CRF/title_train.json', 'r', encoding='utf-8'))
-    train_data = json.load(open(r'data/title_train.json', 'r', encoding='utf-8'))
+    train_data = json.load(open(r'data/tag_title_train.json', 'r', encoding='utf-8'))
     train_loader = data_generator(args, train_data, tokenizer, args.train_batch_size, random=True)
 
 
@@ -117,8 +117,8 @@ def train(args):
          "weight_decay": 0.0},
     ]
     
-    optimizer = torch.optim.SGD(optimizer_grouped_parameters, lr=args.learning_rate)
-    # optimizer = torch.optim.AdamW(optimizer_grouped_parameters, lr=args.learning_rate, eps=args.min_num)
+    # optimizer = torch.optim.SGD(optimizer_grouped_parameters, lr=args.learning_rate)
+    optimizer = torch.optim.AdamW(optimizer_grouped_parameters, lr=args.learning_rate, eps=args.min_num)
     scheduler = get_linear_schedule_with_warmup(
         optimizer, num_warmup_steps=args.warmup * t_total, num_training_steps=t_total
     )
@@ -167,14 +167,18 @@ def train(args):
             patience_counter += 1
 
         # Early stopping 
-        if patience_counter > 10  or epoch == args.epoch_num:
+        if patience_counter > 10 or epoch == args.epoch_num:
             print("Best result: {:f}".format(best_f1))
             break
+
+        if epoch % 5 == 0:
+            print("eval on test...", end=" ")
+            print(evaluate(args, model, tokenizer))
 
 def evaluate(args, model, tokenizer):
 
     model.eval()
-    test_data = json.load(open(r'data/title_test.json', 'r', encoding='utf-8'))
+    test_data = json.load(open(r'data/tag_title_test.json', 'r', encoding='utf-8'))
     test_loader = data_generator(args, test_data, tokenizer, args.train_batch_size, random=False, is_train=False)
     per_right, sen_right = 0, 0
     title_pred = {}
@@ -226,7 +230,7 @@ def evaluate(args, model, tokenizer):
 def pred(args, model, tokenizer):
     
     model.eval()
-    test_data = json.load(open('data/title_dev.json', 'r', encoding='utf-8'))
+    test_data = json.load(open('data/tag_title_dev.json', 'r', encoding='utf-8'))
     test_loader = data_generator(args, test_data, tokenizer, args.train_batch_size, random=False, is_train=False)
     per_right = 0
     title_pred = {}
@@ -282,9 +286,9 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--seed', type=int, default=2022, help="random seed for initialization")
     parser.add_argument('--ex_index', type=str, default="bilstm_crf")
-    parser.add_argument('--train_batch_size', required=True, type=int, default=8, help="train batch size")
-    parser.add_argument('--epoch_num', required=True, type=int, default=20, help="number of epochs")
-    parser.add_argument('--max_len', required=True, type=int, default=100, help="最大句子长度")
+    parser.add_argument('--train_batch_size', type=int, default=16, help="train batch size")
+    parser.add_argument('--epoch_num', type=int, default=100, help="number of epochs")
+    parser.add_argument('--max_len',type=int, default=100, help="最大句子长度")
     parser.add_argument('--weight_decay', default=0.0, type=float)
     parser.add_argument('--max_grad_norm', default=1.0, type=float)
     parser.add_argument('--min_num', default=1e-7, type=float)
@@ -300,7 +304,7 @@ if __name__ == '__main__':
 
     output_path = os.path.join("./output/", args.ex_index)
     train(args)
-    root_path = Path(os.path.abspath(os.path.dirname(__file__)))
+    root_path = Path(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
     bert_model_dir = root_path / 'pretrain_models/bert_base_cased'
     bert_config = BertConfig.from_json_file(os.path.join(bert_model_dir, 'config.json'))
     model = Bert_LSTM_CRF.from_pretrained(config=bert_config, pretrained_model_name_or_path=bert_model_dir)

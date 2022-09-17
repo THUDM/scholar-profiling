@@ -6,6 +6,8 @@ import pandas as pd
 from lxml import etree
 from tqdm import tqdm
 
+import settings
+
 # search_pages_dir = "C:/Users/YL/Desktop/googleSearch/"
 search_pages_dir = "/home/zfj/research-data/user_profiling/googleSearch/"
 
