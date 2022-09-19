@@ -249,7 +249,8 @@ titleCount={}
 def create_title_classification_data():
     global  title2id
     global  id2title
-    outfile =open('title.train','w',encoding='utf-8')
+    # outfile =open('title.train','w',encoding='utf-8')
+    outfile = open(os.path.join(bert_input_dir, "title.train"),'w',encoding='utf-8')
     titles = []
     for d in tqdm(train_data):
         title = d['title']
@@ -266,8 +267,8 @@ def create_title_classification_data():
     #         ,'Associate Professor','Researcher ','Professor ','Lecturer ','Ph.D',' Student '}
     for d in train_data:
         id = d['id']
-        name = d['name']
-        org = d['org']
+        name = d['name'].replace('\n',' ').replace('\t',' ')
+        org = d['org'].replace('\n',' ').replace('\t',' ')
         title = d['title']
         link_list = get_search_list(id)
         text = name + ';' + org + '; '
@@ -329,6 +330,6 @@ lang：用神经网络模型，使总分提高约5个点(47.5 -> 56)（使用中
 '''
 
 # create_gender_classification_data()
-create_homepage_classification_data()
-# create_title_classification_data()
+# create_homepage_classification_data()
+create_title_classification_data()
 # merge_result()
