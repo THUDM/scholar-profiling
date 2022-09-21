@@ -6,7 +6,6 @@ save/
 
 figs/
 results/
-*.txt
 *.json
 *.pk
 *.train
