@@ -106,7 +106,7 @@ AdamLR = extend_with_piecewise_linear_lr(Adam, name='AdamLR')
 model.compile(
     loss='sparse_categorical_crossentropy',
     # optimizer=Adam(1e-5),  # 用足够小的学习率
-    optimizer=AdamLR(lr=1e-4, lr_schedule={
+    optimizer=AdamLR(lr=1e-5, lr_schedule={
         1000: 1,
         2000: 0.1
     }),
@@ -140,6 +140,8 @@ def evaluate(data):
     pbar.close()
     return f1, precision, recall
 
+best_epoch = None
+
 class Evaluator(keras.callbacks.Callback):
     """Stop training when the loss is at its min, i.e. the loss stops decreasing.
   Arguments:
@@ -158,8 +160,10 @@ class Evaluator(keras.callbacks.Callback):
     def on_epoch_end(self, epoch, logs=None):
         f1, precision, recall  = evaluate(valid_generator)
         if f1 > self.best_f1:
+            best_epoch = epoch
             self.best_f1 = f1
-            model.save_weights('homepage_best_model.weights')
+            os.makedirs("output/bert/", exist_ok=True)
+            model.save_weights('output/bert/homepage_best_model.weights')
 
         print(
             u'f1: %.5f,precision: %.5f,recall: %.5f, best_f1: %.5f\n' %
@@ -253,6 +257,8 @@ def pred(file):
 
 # model.load_weights('homepage_best_model.weights')
 train()
+print("best_epoch:", best_epoch)
+model.load_weights('output/bert/homepage_best_model.weights')
 evaluate(valid_generator)
 # test_path="../../data/new_test.xlsx"
 test_path = os.path.join(settings.DATA_DIR, "raw", "new_test.xlsx")

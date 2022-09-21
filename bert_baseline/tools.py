@@ -297,7 +297,8 @@ def merge_result():
         result[id]['title'] = 'Professor(教授)'
         result[id]['gender'] = 'male'
     for key in ['gender','homepage','title']:          #['homepage','lang','gender','title']
-        homepage_data = load_data(r'../../data/'+'new_test-'+key+'.json')
+        # homepage_data = load_data(r'../../data/'+'new_test-'+key+'.json')
+        homepage_data = load_data(os.path.join(settings.DATA_DIR, "raw", 'new_test-'+key+'.json'))
         for d in homepage_data:
             result[d['id']][key] = d[key]
     # outf = open(r'../../data/luoyang-result_new.json', 'w', encoding='utf-8')
@@ -331,5 +332,5 @@ lang：用神经网络模型，使总分提高约5个点(47.5 -> 56)（使用中
 
 # create_gender_classification_data()
 # create_homepage_classification_data()
-create_title_classification_data()
-# merge_result()
+# create_title_classification_data()
+merge_result()
