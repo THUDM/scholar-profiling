@@ -55,7 +55,8 @@ python bert_baseline/gender_classification_bert.py
 python bert_baseline/homepage_classification_bert.py
 # position
 python bert_baseline/title_classification_bert.py
-# evaluation
+# for evaluation, uncomment merge_result() funciton in bert_baseline/tools.py 
+python bert_baseline/tools.py 
 python evaluate.py --hp data/luoyang-result_new.json --rf data/raw/ground_truth.json
 
 # Bi-LSTM-CRF for position tagging
