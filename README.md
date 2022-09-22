@@ -4,6 +4,7 @@
 
 - Linux
 - Python 3.7
+- PyTorch 1.10.0+cu111
 
 ## Getting Started
 
