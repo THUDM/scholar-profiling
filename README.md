@@ -43,6 +43,7 @@ python sml_baseline/HomepagePrediction/homepage_train.py
 # position
 python sml_baseline/TitlePrediction/title_main.py
 # evaluation
+python sml_baseline/merge_results.py
 python evaluate.py --hp output/sml/sml_predict_xgboost.json --rf data/raw/ground_truth.json
 
 # BERT
