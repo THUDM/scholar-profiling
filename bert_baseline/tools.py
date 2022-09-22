@@ -34,6 +34,7 @@ test_path = os.path.join(settings.DATA_DIR, "raw", "new_test.xlsx")
 
 # search_pages_dir = "/home/zfj/research-data/user_profiling/googleSearch/"
 search_pages_dir = os.path.join(settings.DATA_DIR, "googleSearch", "data")
+print("search_pages_dir", search_pages_dir)
 bert_input_dir = os.path.join(settings.DATA_DIR, "bert_input")
 os.makedirs(bert_input_dir, exist_ok=True)
 
@@ -82,7 +83,7 @@ def get_search_list(id):
     # file = '/DATA/disk1/model_data/wll_data/kaiyu/ccks_numberone/CCKS2021_Aminer_profiling_googlesearch/data/' + id+ '_s1.html'
     # file = search_pages_dir + id + '_s1.html'
     file = os.path.join(search_pages_dir, id+"_s1.html")
-    # print("file s1 exists", os.path.exists(file))
+    # print("file s1 exists", file, os.path.exists(file))
     if os.path.exists(file):
         link_list = extract_google_page(file)
     # file = '/DATA/disk1/model_data/wll_data/kaiyu/ccks_numberone/CCKS2021_Aminer_profiling_googlesearch/data/' + id+ '_s2.html'
@@ -267,10 +268,11 @@ def create_title_classification_data():
     #         ,'Associate Professor','Researcher ','Professor ','Lecturer ','Ph.D',' Student '}
     for d in train_data:
         id = d['id']
-        name = d['name'].replace('\n',' ').replace('\t',' ')
-        org = d['org'].replace('\n',' ').replace('\t',' ')
+        name = d['name']
+        org = d['org']
         title = d['title']
         link_list = get_search_list(id)
+        # print("link list", link_list)
         text = name + ';' + org + '; '
         if not link_list:continue
         for link in link_list:
@@ -332,5 +334,5 @@ lang：用神经网络模型，使总分提高约5个点(47.5 -> 56)（使用中
 
 # create_gender_classification_data()
 # create_homepage_classification_data()
-# create_title_classification_data()
-merge_result()
+create_title_classification_data()
+# merge_result()

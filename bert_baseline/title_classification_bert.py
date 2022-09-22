@@ -43,6 +43,7 @@ def load_data(filename):
 data = load_data(os.path.join(bert_input_dir, "title.train"))
 valid_data = data[5000:]
 train_data = data[:5000]
+print(len(train_data), len(valid_data))
 
 # 建立分词器
 tokenizer = Tokenizer(dict_path, do_lower_case=True)
