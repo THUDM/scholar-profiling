@@ -1,0 +1,17 @@
+name: doc_ee
+path: /shenyelin/UIE-main/dataset/DocEE-en/normal_setting
+data_class: DOCEvent
+split:
+  train: train.json
+  val: dev.json
+  test: test.json
+language: en
+
+# mapper:
+#   FAC: facility
+#   GPE: geographical social political
+#   LOC: location
+#   ORG: organization
+#   PER: person
+#   VEH: vehicle
+#   WEA: weapon

@@ -1,0 +1,31 @@
+name: en_bio
+path: /shenyelin/bio_baselines/UIE-main/dataset/raw_en_bio
+data_class: En_bio
+split:
+  train: en_bio_train.json
+  val: en_bio_val.json
+  test: en_bio_test.json
+language: en
+mapper:
+  work_for: work for
+  title: title 
+  nationality: nationality
+  gender: gender
+  birth_place: birth place
+  birthday: birthday
+  date_of_death: date of death
+  cause_of_death: cause of death
+  nation: nation
+  highest_education: highest education
+  research_interests: research interests
+  honorary_title: honorary title
+  awards: awards
+  education: education
+  work_record: work record
+  take_office: take office
+  academic_works: academic works
+  journal: journal
+  project: project
+  student: student
+  tutor: tutor
+  party: party
