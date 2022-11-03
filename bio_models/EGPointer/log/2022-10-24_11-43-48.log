@@ -1,0 +1,489 @@
+2022-10-24 11:44:01 - train_CME.py[line:112] - INFO: trian_loss:11.951836	 train_f1:0.000016
+2022-10-24 11:44:22 - train_CME.py[line:112] - INFO: trian_loss:8.966805	 train_f1:0.000284
+2022-10-24 11:44:51 - train_CME.py[line:131] - INFO: 
+Eval  precision:1.0  recall:0.000605  f1:0.001208  origin:3308  found:2  right:2
+2022-10-24 11:44:51 - train_CME.py[line:133] - INFO: -- item:  highest_education  precision:0  recall:0.0  f1:0.0  origin:194  found:0  right:0
+2022-10-24 11:44:51 - train_CME.py[line:133] - INFO: -- item:  title  precision:0  recall:0.0  f1:0.0  origin:200  found:0  right:0
+2022-10-24 11:44:51 - train_CME.py[line:133] - INFO: -- item:  take_office  precision:0  recall:0.0  f1:0.0  origin:624  found:0  right:0
+2022-10-24 11:44:51 - train_CME.py[line:133] - INFO: -- item:  gender  precision:1.0  recall:0.007663  f1:0.015209  origin:261  found:2  right:2
+2022-10-24 11:44:51 - train_CME.py[line:133] - INFO: -- item:  research_interests  precision:0  recall:0.0  f1:0.0  origin:492  found:0  right:0
+2022-10-24 11:44:51 - train_CME.py[line:133] - INFO: -- item:  work_for  precision:0  recall:0.0  f1:0.0  origin:192  found:0  right:0
+2022-10-24 11:44:51 - train_CME.py[line:133] - INFO: -- item:  work_record  precision:0  recall:0.0  f1:0.0  origin:304  found:0  right:0
+2022-10-24 11:44:51 - train_CME.py[line:133] - INFO: -- item:  education  precision:0  recall:0.0  f1:0.0  origin:171  found:0  right:0
+2022-10-24 11:44:51 - train_CME.py[line:133] - INFO: -- item:  awards  precision:0  recall:0.0  f1:0.0  origin:549  found:0  right:0
+2022-10-24 11:44:51 - train_CME.py[line:133] - INFO: -- item:  honorary_title  precision:0  recall:0.0  f1:0.0  origin:243  found:0  right:0
+2022-10-24 11:44:51 - train_CME.py[line:133] - INFO: -- item:  birthday  precision:0  recall:0.0  f1:0.0  origin:36  found:0  right:0
+2022-10-24 11:44:51 - train_CME.py[line:133] - INFO: -- item:  birth_place  precision:0  recall:0.0  f1:0.0  origin:42  found:0  right:0
+2022-10-24 11:44:52 - train_CME.py[line:142] - INFO: find best f1 epoch0
+2022-10-24 11:44:56 - train_CME.py[line:112] - INFO: trian_loss:3.225388	 train_f1:0.000000
+2022-10-24 11:45:20 - train_CME.py[line:112] - INFO: trian_loss:2.879582	 train_f1:0.026452
+2022-10-24 11:45:49 - train_CME.py[line:131] - INFO: 
+Eval  precision:0.86802  recall:0.051693  f1:0.097575  origin:3308  found:197  right:171
+2022-10-24 11:45:49 - train_CME.py[line:133] - INFO: -- item:  highest_education  precision:1.0  recall:0.005155  f1:0.010256  origin:194  found:1  right:1
+2022-10-24 11:45:49 - train_CME.py[line:133] - INFO: -- item:  title  precision:0  recall:0.0  f1:0.0  origin:200  found:0  right:0
+2022-10-24 11:45:49 - train_CME.py[line:133] - INFO: -- item:  take_office  precision:0  recall:0.0  f1:0.0  origin:624  found:0  right:0
+2022-10-24 11:45:49 - train_CME.py[line:133] - INFO: -- item:  gender  precision:0.915254  recall:0.62069  f1:0.739726  origin:261  found:177  right:162
+2022-10-24 11:45:49 - train_CME.py[line:133] - INFO: -- item:  research_interests  precision:0.363636  recall:0.00813  f1:0.015905  origin:492  found:11  right:4
+2022-10-24 11:45:49 - train_CME.py[line:133] - INFO: -- item:  work_for  precision:0.5  recall:0.020833  f1:0.04  origin:192  found:8  right:4
+2022-10-24 11:45:49 - train_CME.py[line:133] - INFO: -- item:  work_record  precision:0  recall:0.0  f1:0.0  origin:304  found:0  right:0
+2022-10-24 11:45:49 - train_CME.py[line:133] - INFO: -- item:  education  precision:0  recall:0.0  f1:0.0  origin:171  found:0  right:0
+2022-10-24 11:45:49 - train_CME.py[line:133] - INFO: -- item:  awards  precision:0  recall:0.0  f1:0.0  origin:549  found:0  right:0
+2022-10-24 11:45:49 - train_CME.py[line:133] - INFO: -- item:  honorary_title  precision:0  recall:0.0  f1:0.0  origin:243  found:0  right:0
+2022-10-24 11:45:49 - train_CME.py[line:133] - INFO: -- item:  birthday  precision:0  recall:0.0  f1:0.0  origin:36  found:0  right:0
+2022-10-24 11:45:49 - train_CME.py[line:133] - INFO: -- item:  birth_place  precision:0  recall:0.0  f1:0.0  origin:42  found:0  right:0
+2022-10-24 11:45:50 - train_CME.py[line:142] - INFO: find best f1 epoch1
+2022-10-24 11:45:54 - train_CME.py[line:112] - INFO: trian_loss:2.241015	 train_f1:0.044444
+2022-10-24 11:46:15 - train_CME.py[line:112] - INFO: trian_loss:2.038341	 train_f1:0.169817
+2022-10-24 11:46:45 - train_CME.py[line:131] - INFO: 
+Eval  precision:0.659404  recall:0.173821  f1:0.27512  origin:3308  found:872  right:575
+2022-10-24 11:46:45 - train_CME.py[line:133] - INFO: -- item:  highest_education  precision:0.815217  recall:0.773196  f1:0.793651  origin:194  found:184  right:150
+2022-10-24 11:46:45 - train_CME.py[line:133] - INFO: -- item:  title  precision:0.666667  recall:0.14  f1:0.231405  origin:200  found:42  right:28
+2022-10-24 11:46:45 - train_CME.py[line:133] - INFO: -- item:  take_office  precision:0  recall:0.0  f1:0.0  origin:624  found:0  right:0
+2022-10-24 11:46:45 - train_CME.py[line:133] - INFO: -- item:  gender  precision:0.717143  recall:0.961686  f1:0.821604  origin:261  found:350  right:251
+2022-10-24 11:46:45 - train_CME.py[line:133] - INFO: -- item:  research_interests  precision:0.522936  recall:0.115854  f1:0.189684  origin:492  found:109  right:57
+2022-10-24 11:46:45 - train_CME.py[line:133] - INFO: -- item:  work_for  precision:0.6  recall:0.0625  f1:0.113208  origin:192  found:20  right:12
+2022-10-24 11:46:45 - train_CME.py[line:133] - INFO: -- item:  work_record  precision:0.035714  recall:0.006579  f1:0.011111  origin:304  found:56  right:2
+2022-10-24 11:46:45 - train_CME.py[line:133] - INFO: -- item:  education  precision:0.648649  recall:0.140351  f1:0.230769  origin:171  found:37  right:24
+2022-10-24 11:46:45 - train_CME.py[line:133] - INFO: -- item:  awards  precision:0.555556  recall:0.045537  f1:0.084175  origin:549  found:45  right:25
+2022-10-24 11:46:45 - train_CME.py[line:133] - INFO: -- item:  honorary_title  precision:0  recall:0.0  f1:0.0  origin:243  found:0  right:0
+2022-10-24 11:46:45 - train_CME.py[line:133] - INFO: -- item:  birthday  precision:0.892857  recall:0.694444  f1:0.78125  origin:36  found:28  right:25
+2022-10-24 11:46:45 - train_CME.py[line:133] - INFO: -- item:  birth_place  precision:1.0  recall:0.02381  f1:0.046512  origin:42  found:1  right:1
+2022-10-24 11:46:46 - train_CME.py[line:142] - INFO: find best f1 epoch2
+2022-10-24 11:46:50 - train_CME.py[line:112] - INFO: trian_loss:1.803548	 train_f1:0.220859
+2022-10-24 11:47:16 - train_CME.py[line:112] - INFO: trian_loss:1.607055	 train_f1:0.276229
+2022-10-24 11:47:53 - train_CME.py[line:131] - INFO: 
+Eval  precision:0.610185  recall:0.199214  f1:0.300365  origin:3308  found:1080  right:659
+2022-10-24 11:47:53 - train_CME.py[line:133] - INFO: -- item:  highest_education  precision:0.782609  recall:0.835052  f1:0.80798  origin:194  found:207  right:162
+2022-10-24 11:47:53 - train_CME.py[line:133] - INFO: -- item:  title  precision:0.473373  recall:0.4  f1:0.433604  origin:200  found:169  right:80
+2022-10-24 11:47:53 - train_CME.py[line:133] - INFO: -- item:  take_office  precision:0.473684  recall:0.014423  f1:0.027994  origin:624  found:19  right:9
+2022-10-24 11:47:53 - train_CME.py[line:133] - INFO: -- item:  gender  precision:0.857143  recall:0.850575  f1:0.853846  origin:261  found:259  right:222
+2022-10-24 11:47:53 - train_CME.py[line:133] - INFO: -- item:  research_interests  precision:0.422819  recall:0.128049  f1:0.196568  origin:492  found:149  right:63
+2022-10-24 11:47:53 - train_CME.py[line:133] - INFO: -- item:  work_for  precision:0.398058  recall:0.427083  f1:0.41206  origin:192  found:206  right:82
+2022-10-24 11:47:53 - train_CME.py[line:133] - INFO: -- item:  work_record  precision:0  recall:0.0  f1:0.0  origin:304  found:0  right:0
+2022-10-24 11:47:53 - train_CME.py[line:133] - INFO: -- item:  education  precision:0.0  recall:0.0  f1:0.0  origin:171  found:1  right:0
+2022-10-24 11:47:53 - train_CME.py[line:133] - INFO: -- item:  awards  precision:0.545455  recall:0.054645  f1:0.099338  origin:549  found:55  right:30
+2022-10-24 11:47:53 - train_CME.py[line:133] - INFO: -- item:  honorary_title  precision:0  recall:0.0  f1:0.0  origin:243  found:0  right:0
+2022-10-24 11:47:53 - train_CME.py[line:133] - INFO: -- item:  birthday  precision:1.0  recall:0.055556  f1:0.105263  origin:36  found:2  right:2
+2022-10-24 11:47:53 - train_CME.py[line:133] - INFO: -- item:  birth_place  precision:0.692308  recall:0.214286  f1:0.327273  origin:42  found:13  right:9
+2022-10-24 11:47:54 - train_CME.py[line:142] - INFO: find best f1 epoch3
+2022-10-24 11:47:58 - train_CME.py[line:112] - INFO: trian_loss:1.247361	 train_f1:0.422111
+2022-10-24 11:48:26 - train_CME.py[line:112] - INFO: trian_loss:1.293324	 train_f1:0.366031
+2022-10-24 11:49:00 - train_CME.py[line:131] - INFO: 
+Eval  precision:0.55156  recall:0.315296  f1:0.401231  origin:3308  found:1891  right:1043
+2022-10-24 11:49:00 - train_CME.py[line:133] - INFO: -- item:  highest_education  precision:0.802956  recall:0.840206  f1:0.821159  origin:194  found:203  right:163
+2022-10-24 11:49:00 - train_CME.py[line:133] - INFO: -- item:  title  precision:0.683333  recall:0.205  f1:0.315385  origin:200  found:60  right:41
+2022-10-24 11:49:00 - train_CME.py[line:133] - INFO: -- item:  take_office  precision:0.351562  recall:0.072115  f1:0.119681  origin:624  found:128  right:45
+2022-10-24 11:49:00 - train_CME.py[line:133] - INFO: -- item:  gender  precision:0.84058  recall:0.888889  f1:0.86406  origin:261  found:276  right:232
+2022-10-24 11:49:00 - train_CME.py[line:133] - INFO: -- item:  research_interests  precision:0.342391  recall:0.256098  f1:0.293023  origin:492  found:368  right:126
+2022-10-24 11:49:00 - train_CME.py[line:133] - INFO: -- item:  work_for  precision:0.491228  recall:0.291667  f1:0.366013  origin:192  found:114  right:56
+2022-10-24 11:49:00 - train_CME.py[line:133] - INFO: -- item:  work_record  precision:0.307692  recall:0.026316  f1:0.048485  origin:304  found:26  right:8
+2022-10-24 11:49:00 - train_CME.py[line:133] - INFO: -- item:  education  precision:0.5  recall:0.245614  f1:0.329412  origin:171  found:84  right:42
+2022-10-24 11:49:00 - train_CME.py[line:133] - INFO: -- item:  awards  precision:0.483696  recall:0.486339  f1:0.485014  origin:549  found:552  right:267
+2022-10-24 11:49:00 - train_CME.py[line:133] - INFO: -- item:  honorary_title  precision:1.0  recall:0.004115  f1:0.008197  origin:243  found:1  right:1
+2022-10-24 11:49:00 - train_CME.py[line:133] - INFO: -- item:  birthday  precision:0.864865  recall:0.888889  f1:0.876712  origin:36  found:37  right:32
+2022-10-24 11:49:00 - train_CME.py[line:133] - INFO: -- item:  birth_place  precision:0.714286  recall:0.714286  f1:0.714286  origin:42  found:42  right:30
+2022-10-24 11:49:00 - train_CME.py[line:142] - INFO: find best f1 epoch4
+2022-10-24 11:49:04 - train_CME.py[line:112] - INFO: trian_loss:1.193668	 train_f1:0.545455
+2022-10-24 11:49:28 - train_CME.py[line:112] - INFO: trian_loss:1.142356	 train_f1:0.446745
+2022-10-24 11:50:04 - train_CME.py[line:131] - INFO: 
+Eval  precision:0.575183  recall:0.284462  f1:0.380663  origin:3308  found:1636  right:941
+2022-10-24 11:50:04 - train_CME.py[line:133] - INFO: -- item:  highest_education  precision:0.794118  recall:0.835052  f1:0.81407  origin:194  found:204  right:162
+2022-10-24 11:50:04 - train_CME.py[line:133] - INFO: -- item:  title  precision:0.443182  recall:0.39  f1:0.414894  origin:200  found:176  right:78
+2022-10-24 11:50:04 - train_CME.py[line:133] - INFO: -- item:  take_office  precision:0.347458  recall:0.13141  f1:0.190698  origin:624  found:236  right:82
+2022-10-24 11:50:04 - train_CME.py[line:133] - INFO: -- item:  gender  precision:0.861224  recall:0.808429  f1:0.833992  origin:261  found:245  right:211
+2022-10-24 11:50:04 - train_CME.py[line:133] - INFO: -- item:  research_interests  precision:0.39527  recall:0.237805  f1:0.296954  origin:492  found:296  right:117
+2022-10-24 11:50:04 - train_CME.py[line:133] - INFO: -- item:  work_for  precision:0.489655  recall:0.369792  f1:0.421365  origin:192  found:145  right:71
+2022-10-24 11:50:04 - train_CME.py[line:133] - INFO: -- item:  work_record  precision:0.419355  recall:0.042763  f1:0.077612  origin:304  found:31  right:13
+2022-10-24 11:50:04 - train_CME.py[line:133] - INFO: -- item:  education  precision:0.596154  recall:0.181287  f1:0.278027  origin:171  found:52  right:31
+2022-10-24 11:50:04 - train_CME.py[line:133] - INFO: -- item:  awards  precision:0.657143  recall:0.209472  f1:0.31768  origin:549  found:175  right:115
+2022-10-24 11:50:04 - train_CME.py[line:133] - INFO: -- item:  honorary_title  precision:0  recall:0.0  f1:0.0  origin:243  found:0  right:0
+2022-10-24 11:50:04 - train_CME.py[line:133] - INFO: -- item:  birthday  precision:0.891892  recall:0.916667  f1:0.90411  origin:36  found:37  right:33
+2022-10-24 11:50:04 - train_CME.py[line:133] - INFO: -- item:  birth_place  precision:0.717949  recall:0.666667  f1:0.691358  origin:42  found:39  right:28
+2022-10-24 11:50:09 - train_CME.py[line:112] - INFO: trian_loss:0.938880	 train_f1:0.470000
+2022-10-24 11:50:34 - train_CME.py[line:112] - INFO: trian_loss:0.970602	 train_f1:0.505260
+2022-10-24 11:51:08 - train_CME.py[line:131] - INFO: 
+Eval  precision:0.575916  recall:0.299274  f1:0.393873  origin:3308  found:1719  right:990
+2022-10-24 11:51:08 - train_CME.py[line:133] - INFO: -- item:  highest_education  precision:0.771028  recall:0.850515  f1:0.808824  origin:194  found:214  right:165
+2022-10-24 11:51:08 - train_CME.py[line:133] - INFO: -- item:  title  precision:0.509202  recall:0.415  f1:0.4573  origin:200  found:163  right:83
+2022-10-24 11:51:08 - train_CME.py[line:133] - INFO: -- item:  take_office  precision:0.32646  recall:0.152244  f1:0.20765  origin:624  found:291  right:95
+2022-10-24 11:51:08 - train_CME.py[line:133] - INFO: -- item:  gender  precision:0.889796  recall:0.835249  f1:0.86166  origin:261  found:245  right:218
+2022-10-24 11:51:08 - train_CME.py[line:133] - INFO: -- item:  research_interests  precision:0.354331  recall:0.091463  f1:0.145396  origin:492  found:127  right:45
+2022-10-24 11:51:08 - train_CME.py[line:133] - INFO: -- item:  work_for  precision:0.53  recall:0.276042  f1:0.363014  origin:192  found:100  right:53
+2022-10-24 11:51:08 - train_CME.py[line:133] - INFO: -- item:  work_record  precision:0.388889  recall:0.069079  f1:0.117318  origin:304  found:54  right:21
+2022-10-24 11:51:08 - train_CME.py[line:133] - INFO: -- item:  education  precision:0.52  recall:0.22807  f1:0.317073  origin:171  found:75  right:39
+2022-10-24 11:51:08 - train_CME.py[line:133] - INFO: -- item:  awards  precision:0.561308  recall:0.375228  f1:0.449782  origin:549  found:367  right:206
+2022-10-24 11:51:08 - train_CME.py[line:133] - INFO: -- item:  honorary_title  precision:0.6  recall:0.012346  f1:0.024194  origin:243  found:5  right:3
+2022-10-24 11:51:08 - train_CME.py[line:133] - INFO: -- item:  birthday  precision:0.813953  recall:0.972222  f1:0.886076  origin:36  found:43  right:35
+2022-10-24 11:51:08 - train_CME.py[line:133] - INFO: -- item:  birth_place  precision:0.771429  recall:0.642857  f1:0.701299  origin:42  found:35  right:27
+2022-10-24 11:51:13 - train_CME.py[line:112] - INFO: trian_loss:0.862695	 train_f1:0.562500
+2022-10-24 11:51:37 - train_CME.py[line:112] - INFO: trian_loss:0.840808	 train_f1:0.595194
+2022-10-24 11:52:12 - train_CME.py[line:131] - INFO: 
+Eval  precision:0.521422  recall:0.345828  f1:0.415849  origin:3308  found:2194  right:1144
+2022-10-24 11:52:12 - train_CME.py[line:133] - INFO: -- item:  highest_education  precision:0.772093  recall:0.85567  f1:0.811736  origin:194  found:215  right:166
+2022-10-24 11:52:12 - train_CME.py[line:133] - INFO: -- item:  title  precision:0.413636  recall:0.455  f1:0.433333  origin:200  found:220  right:91
+2022-10-24 11:52:12 - train_CME.py[line:133] - INFO: -- item:  take_office  precision:0.324232  recall:0.152244  f1:0.207197  origin:624  found:293  right:95
+2022-10-24 11:52:12 - train_CME.py[line:133] - INFO: -- item:  gender  precision:0.844697  recall:0.854406  f1:0.849524  origin:261  found:264  right:223
+2022-10-24 11:52:12 - train_CME.py[line:133] - INFO: -- item:  research_interests  precision:0.362319  recall:0.203252  f1:0.260417  origin:492  found:276  right:100
+2022-10-24 11:52:12 - train_CME.py[line:133] - INFO: -- item:  work_for  precision:0.43662  recall:0.322917  f1:0.371257  origin:192  found:142  right:62
+2022-10-24 11:52:12 - train_CME.py[line:133] - INFO: -- item:  work_record  precision:0.298077  recall:0.101974  f1:0.151961  origin:304  found:104  right:31
+2022-10-24 11:52:12 - train_CME.py[line:133] - INFO: -- item:  education  precision:0.475806  recall:0.345029  f1:0.4  origin:171  found:124  right:59
+2022-10-24 11:52:12 - train_CME.py[line:133] - INFO: -- item:  awards  precision:0.536424  recall:0.442623  f1:0.48503  origin:549  found:453  right:243
+2022-10-24 11:52:12 - train_CME.py[line:133] - INFO: -- item:  honorary_title  precision:0.583333  recall:0.028807  f1:0.054902  origin:243  found:12  right:7
+2022-10-24 11:52:12 - train_CME.py[line:133] - INFO: -- item:  birthday  precision:0.8  recall:1.0  f1:0.888889  origin:36  found:45  right:36
+2022-10-24 11:52:12 - train_CME.py[line:133] - INFO: -- item:  birth_place  precision:0.673913  recall:0.738095  f1:0.704545  origin:42  found:46  right:31
+2022-10-24 11:52:13 - train_CME.py[line:142] - INFO: find best f1 epoch7
+2022-10-24 11:52:18 - train_CME.py[line:112] - INFO: trian_loss:0.738106	 train_f1:0.638889
+2022-10-24 11:52:43 - train_CME.py[line:112] - INFO: trian_loss:0.730377	 train_f1:0.647620
+2022-10-24 11:53:15 - train_CME.py[line:131] - INFO: 
+Eval  precision:0.511889  recall:0.35792  f1:0.421277  origin:3308  found:2313  right:1184
+2022-10-24 11:53:15 - train_CME.py[line:133] - INFO: -- item:  highest_education  precision:0.790816  recall:0.798969  f1:0.794872  origin:194  found:196  right:155
+2022-10-24 11:53:15 - train_CME.py[line:133] - INFO: -- item:  title  precision:0.487342  recall:0.385  f1:0.430168  origin:200  found:158  right:77
+2022-10-24 11:53:15 - train_CME.py[line:133] - INFO: -- item:  take_office  precision:0.311615  recall:0.176282  f1:0.225179  origin:624  found:353  right:110
+2022-10-24 11:53:15 - train_CME.py[line:133] - INFO: -- item:  gender  precision:0.814685  recall:0.89272  f1:0.85192  origin:261  found:286  right:233
+2022-10-24 11:53:15 - train_CME.py[line:133] - INFO: -- item:  research_interests  precision:0.299694  recall:0.199187  f1:0.239316  origin:492  found:327  right:98
+2022-10-24 11:53:15 - train_CME.py[line:133] - INFO: -- item:  work_for  precision:0.55102  recall:0.28125  f1:0.372414  origin:192  found:98  right:54
+2022-10-24 11:53:15 - train_CME.py[line:133] - INFO: -- item:  work_record  precision:0.273504  recall:0.105263  f1:0.152019  origin:304  found:117  right:32
+2022-10-24 11:53:15 - train_CME.py[line:133] - INFO: -- item:  education  precision:0.52381  recall:0.321637  f1:0.398551  origin:171  found:105  right:55
+2022-10-24 11:53:15 - train_CME.py[line:133] - INFO: -- item:  awards  precision:0.522361  recall:0.531876  f1:0.527076  origin:549  found:559  right:292
+2022-10-24 11:53:15 - train_CME.py[line:133] - INFO: -- item:  honorary_title  precision:0.444444  recall:0.049383  f1:0.088889  origin:243  found:27  right:12
+2022-10-24 11:53:15 - train_CME.py[line:133] - INFO: -- item:  birthday  precision:0.813953  recall:0.972222  f1:0.886076  origin:36  found:43  right:35
+2022-10-24 11:53:15 - train_CME.py[line:133] - INFO: -- item:  birth_place  precision:0.704545  recall:0.738095  f1:0.72093  origin:42  found:44  right:31
+2022-10-24 11:53:16 - train_CME.py[line:142] - INFO: find best f1 epoch8
+2022-10-24 11:53:21 - train_CME.py[line:112] - INFO: trian_loss:0.650370	 train_f1:0.634921
+2022-10-24 11:53:46 - train_CME.py[line:112] - INFO: trian_loss:0.671928	 train_f1:0.690183
+2022-10-24 11:54:16 - train_CME.py[line:131] - INFO: 
+Eval  precision:0.520815  recall:0.355502  f1:0.422566  origin:3308  found:2258  right:1176
+2022-10-24 11:54:16 - train_CME.py[line:133] - INFO: -- item:  highest_education  precision:0.744292  recall:0.840206  f1:0.789346  origin:194  found:219  right:163
+2022-10-24 11:54:16 - train_CME.py[line:133] - INFO: -- item:  title  precision:0.456989  recall:0.425  f1:0.440415  origin:200  found:186  right:85
+2022-10-24 11:54:16 - train_CME.py[line:133] - INFO: -- item:  take_office  precision:0.293173  recall:0.233974  f1:0.26025  origin:624  found:498  right:146
+2022-10-24 11:54:16 - train_CME.py[line:133] - INFO: -- item:  gender  precision:0.826087  recall:0.873563  f1:0.849162  origin:261  found:276  right:228
+2022-10-24 11:54:16 - train_CME.py[line:133] - INFO: -- item:  research_interests  precision:0.336508  recall:0.215447  f1:0.262701  origin:492  found:315  right:106
+2022-10-24 11:54:16 - train_CME.py[line:133] - INFO: -- item:  work_for  precision:0.495726  recall:0.302083  f1:0.375405  origin:192  found:117  right:58
+2022-10-24 11:54:16 - train_CME.py[line:133] - INFO: -- item:  work_record  precision:0.462687  recall:0.101974  f1:0.167116  origin:304  found:67  right:31
+2022-10-24 11:54:16 - train_CME.py[line:133] - INFO: -- item:  education  precision:0.517857  recall:0.339181  f1:0.409894  origin:171  found:112  right:58
+2022-10-24 11:54:16 - train_CME.py[line:133] - INFO: -- item:  awards  precision:0.615385  recall:0.408015  f1:0.49069  origin:549  found:364  right:224
+2022-10-24 11:54:16 - train_CME.py[line:133] - INFO: -- item:  honorary_title  precision:0.631579  recall:0.049383  f1:0.091603  origin:243  found:19  right:12
+2022-10-24 11:54:16 - train_CME.py[line:133] - INFO: -- item:  birthday  precision:0.795455  recall:0.972222  f1:0.875  origin:36  found:44  right:35
+2022-10-24 11:54:16 - train_CME.py[line:133] - INFO: -- item:  birth_place  precision:0.731707  recall:0.714286  f1:0.722892  origin:42  found:41  right:30
+2022-10-24 11:54:17 - train_CME.py[line:142] - INFO: find best f1 epoch9
+2022-10-24 11:54:21 - train_CME.py[line:112] - INFO: trian_loss:0.539089	 train_f1:0.838488
+2022-10-24 11:54:42 - train_CME.py[line:112] - INFO: trian_loss:0.606127	 train_f1:0.737314
+2022-10-24 11:55:13 - train_CME.py[line:131] - INFO: 
+Eval  precision:0.465082  recall:0.378476  f1:0.417333  origin:3308  found:2692  right:1252
+2022-10-24 11:55:13 - train_CME.py[line:133] - INFO: -- item:  highest_education  precision:0.807107  recall:0.819588  f1:0.813299  origin:194  found:197  right:159
+2022-10-24 11:55:13 - train_CME.py[line:133] - INFO: -- item:  title  precision:0.490683  recall:0.395  f1:0.437673  origin:200  found:161  right:79
+2022-10-24 11:55:13 - train_CME.py[line:133] - INFO: -- item:  take_office  precision:0.276339  recall:0.25641  f1:0.266002  origin:624  found:579  right:160
+2022-10-24 11:55:13 - train_CME.py[line:133] - INFO: -- item:  gender  precision:0.843284  recall:0.8659  f1:0.854442  origin:261  found:268  right:226
+2022-10-24 11:55:13 - train_CME.py[line:133] - INFO: -- item:  research_interests  precision:0.263456  recall:0.189024  f1:0.220118  origin:492  found:353  right:93
+2022-10-24 11:55:13 - train_CME.py[line:133] - INFO: -- item:  work_for  precision:0.517857  recall:0.302083  f1:0.381579  origin:192  found:112  right:58
+2022-10-24 11:55:13 - train_CME.py[line:133] - INFO: -- item:  work_record  precision:0.215311  recall:0.148026  f1:0.175439  origin:304  found:209  right:45
+2022-10-24 11:55:13 - train_CME.py[line:133] - INFO: -- item:  education  precision:0.466102  recall:0.321637  f1:0.380623  origin:171  found:118  right:55
+2022-10-24 11:55:13 - train_CME.py[line:133] - INFO: -- item:  awards  precision:0.518072  recall:0.54827  f1:0.532743  origin:549  found:581  right:301
+2022-10-24 11:55:13 - train_CME.py[line:133] - INFO: -- item:  honorary_title  precision:0.40625  recall:0.053498  f1:0.094545  origin:243  found:32  right:13
+2022-10-24 11:55:13 - train_CME.py[line:133] - INFO: -- item:  birthday  precision:0.829268  recall:0.944444  f1:0.883117  origin:36  found:41  right:34
+2022-10-24 11:55:13 - train_CME.py[line:133] - INFO: -- item:  birth_place  precision:0.707317  recall:0.690476  f1:0.698795  origin:42  found:41  right:29
+2022-10-24 11:55:18 - train_CME.py[line:112] - INFO: trian_loss:0.470909	 train_f1:0.784314
+2022-10-24 11:55:42 - train_CME.py[line:112] - INFO: trian_loss:0.559485	 train_f1:0.758879
+2022-10-24 11:56:14 - train_CME.py[line:131] - INFO: 
+Eval  precision:0.507362  recall:0.364571  f1:0.424274  origin:3308  found:2377  right:1206
+2022-10-24 11:56:14 - train_CME.py[line:133] - INFO: -- item:  highest_education  precision:0.784314  recall:0.824742  f1:0.80402  origin:194  found:204  right:160
+2022-10-24 11:56:14 - train_CME.py[line:133] - INFO: -- item:  title  precision:0.418605  recall:0.45  f1:0.433735  origin:200  found:215  right:90
+2022-10-24 11:56:14 - train_CME.py[line:133] - INFO: -- item:  take_office  precision:0.334448  recall:0.160256  f1:0.216685  origin:624  found:299  right:100
+2022-10-24 11:56:14 - train_CME.py[line:133] - INFO: -- item:  gender  precision:0.842697  recall:0.862069  f1:0.852273  origin:261  found:267  right:225
+2022-10-24 11:56:14 - train_CME.py[line:133] - INFO: -- item:  research_interests  precision:0.258065  recall:0.211382  f1:0.232402  origin:492  found:403  right:104
+2022-10-24 11:56:14 - train_CME.py[line:133] - INFO: -- item:  work_for  precision:0.486301  recall:0.369792  f1:0.420118  origin:192  found:146  right:71
+2022-10-24 11:56:14 - train_CME.py[line:133] - INFO: -- item:  work_record  precision:0.419355  recall:0.085526  f1:0.142077  origin:304  found:62  right:26
+2022-10-24 11:56:14 - train_CME.py[line:133] - INFO: -- item:  education  precision:0.545455  recall:0.280702  f1:0.370656  origin:171  found:88  right:48
+2022-10-24 11:56:14 - train_CME.py[line:133] - INFO: -- item:  awards  precision:0.529611  recall:0.570128  f1:0.549123  origin:549  found:591  right:313
+2022-10-24 11:56:14 - train_CME.py[line:133] - INFO: -- item:  honorary_title  precision:0.333333  recall:0.032922  f1:0.059925  origin:243  found:24  right:8
+2022-10-24 11:56:14 - train_CME.py[line:133] - INFO: -- item:  birthday  precision:0.825  recall:0.916667  f1:0.868421  origin:36  found:40  right:33
+2022-10-24 11:56:14 - train_CME.py[line:133] - INFO: -- item:  birth_place  precision:0.736842  recall:0.666667  f1:0.7  origin:42  found:38  right:28
+2022-10-24 11:56:15 - train_CME.py[line:142] - INFO: find best f1 epoch11
+2022-10-24 11:56:20 - train_CME.py[line:112] - INFO: trian_loss:0.310022	 train_f1:0.860335
+2022-10-24 11:56:44 - train_CME.py[line:112] - INFO: trian_loss:0.497797	 train_f1:0.790698
+2022-10-24 11:57:17 - train_CME.py[line:131] - INFO: 
+Eval  precision:0.506244  recall:0.343108  f1:0.409009  origin:3308  found:2242  right:1135
+2022-10-24 11:57:17 - train_CME.py[line:133] - INFO: -- item:  highest_education  precision:0.834225  recall:0.804124  f1:0.818898  origin:194  found:187  right:156
+2022-10-24 11:57:17 - train_CME.py[line:133] - INFO: -- item:  title  precision:0.49635  recall:0.34  f1:0.403561  origin:200  found:137  right:68
+2022-10-24 11:57:17 - train_CME.py[line:133] - INFO: -- item:  take_office  precision:0.267813  recall:0.174679  f1:0.211445  origin:624  found:407  right:109
+2022-10-24 11:57:17 - train_CME.py[line:133] - INFO: -- item:  gender  precision:0.873518  recall:0.846743  f1:0.859922  origin:261  found:253  right:221
+2022-10-24 11:57:17 - train_CME.py[line:133] - INFO: -- item:  research_interests  precision:0.301205  recall:0.203252  f1:0.242718  origin:492  found:332  right:100
+2022-10-24 11:57:17 - train_CME.py[line:133] - INFO: -- item:  work_for  precision:0.518182  recall:0.296875  f1:0.377483  origin:192  found:110  right:57
+2022-10-24 11:57:17 - train_CME.py[line:133] - INFO: -- item:  work_record  precision:0.295238  recall:0.101974  f1:0.151589  origin:304  found:105  right:31
+2022-10-24 11:57:17 - train_CME.py[line:133] - INFO: -- item:  education  precision:0.494253  recall:0.251462  f1:0.333333  origin:171  found:87  right:43
+2022-10-24 11:57:17 - train_CME.py[line:133] - INFO: -- item:  awards  precision:0.542169  recall:0.491803  f1:0.515759  origin:549  found:498  right:270
+2022-10-24 11:57:17 - train_CME.py[line:133] - INFO: -- item:  honorary_title  precision:0.390244  recall:0.065844  f1:0.112676  origin:243  found:41  right:16
+2022-10-24 11:57:17 - train_CME.py[line:133] - INFO: -- item:  birthday  precision:0.804878  recall:0.916667  f1:0.857143  origin:36  found:41  right:33
+2022-10-24 11:57:17 - train_CME.py[line:133] - INFO: -- item:  birth_place  precision:0.704545  recall:0.738095  f1:0.72093  origin:42  found:44  right:31
+2022-10-24 11:57:22 - train_CME.py[line:112] - INFO: trian_loss:0.535749	 train_f1:0.807143
+2022-10-24 11:57:46 - train_CME.py[line:112] - INFO: trian_loss:0.464965	 train_f1:0.812199
+2022-10-24 11:58:16 - train_CME.py[line:131] - INFO: 
+Eval  precision:0.473439  recall:0.369105  f1:0.414812  origin:3308  found:2579  right:1221
+2022-10-24 11:58:16 - train_CME.py[line:133] - INFO: -- item:  highest_education  precision:0.819149  recall:0.793814  f1:0.806283  origin:194  found:188  right:154
+2022-10-24 11:58:16 - train_CME.py[line:133] - INFO: -- item:  title  precision:0.457317  recall:0.375  f1:0.412088  origin:200  found:164  right:75
+2022-10-24 11:58:16 - train_CME.py[line:133] - INFO: -- item:  take_office  precision:0.276206  recall:0.266026  f1:0.27102  origin:624  found:601  right:166
+2022-10-24 11:58:16 - train_CME.py[line:133] - INFO: -- item:  gender  precision:0.853846  recall:0.850575  f1:0.852207  origin:261  found:260  right:222
+2022-10-24 11:58:16 - train_CME.py[line:133] - INFO: -- item:  research_interests  precision:0.266504  recall:0.221545  f1:0.241953  origin:492  found:409  right:109
+2022-10-24 11:58:16 - train_CME.py[line:133] - INFO: -- item:  work_for  precision:0.5  recall:0.322917  f1:0.392405  origin:192  found:124  right:62
+2022-10-24 11:58:16 - train_CME.py[line:133] - INFO: -- item:  work_record  precision:0.28  recall:0.092105  f1:0.138614  origin:304  found:100  right:28
+2022-10-24 11:58:16 - train_CME.py[line:133] - INFO: -- item:  education  precision:0.513158  recall:0.22807  f1:0.315789  origin:171  found:76  right:39
+2022-10-24 11:58:16 - train_CME.py[line:133] - INFO: -- item:  awards  precision:0.541016  recall:0.504554  f1:0.522149  origin:549  found:512  right:277
+2022-10-24 11:58:16 - train_CME.py[line:133] - INFO: -- item:  honorary_title  precision:0.396825  recall:0.102881  f1:0.163399  origin:243  found:63  right:25
+2022-10-24 11:58:16 - train_CME.py[line:133] - INFO: -- item:  birthday  precision:0.825  recall:0.916667  f1:0.868421  origin:36  found:40  right:33
+2022-10-24 11:58:16 - train_CME.py[line:133] - INFO: -- item:  birth_place  precision:0.738095  recall:0.738095  f1:0.738095  origin:42  found:42  right:31
+2022-10-24 11:58:21 - train_CME.py[line:112] - INFO: trian_loss:0.373100	 train_f1:0.852713
+2022-10-24 11:58:46 - train_CME.py[line:112] - INFO: trian_loss:0.433234	 train_f1:0.831038
+2022-10-24 11:59:16 - train_CME.py[line:131] - INFO: 
+Eval  precision:0.489592  recall:0.36971  f1:0.421288  origin:3308  found:2498  right:1223
+2022-10-24 11:59:16 - train_CME.py[line:133] - INFO: -- item:  highest_education  precision:0.825397  recall:0.804124  f1:0.814621  origin:194  found:189  right:156
+2022-10-24 11:59:16 - train_CME.py[line:133] - INFO: -- item:  title  precision:0.503311  recall:0.38  f1:0.433048  origin:200  found:151  right:76
+2022-10-24 11:59:16 - train_CME.py[line:133] - INFO: -- item:  take_office  precision:0.286307  recall:0.221154  f1:0.249548  origin:624  found:482  right:138
+2022-10-24 11:59:16 - train_CME.py[line:133] - INFO: -- item:  gender  precision:0.845283  recall:0.858238  f1:0.851711  origin:261  found:265  right:224
+2022-10-24 11:59:16 - train_CME.py[line:133] - INFO: -- item:  research_interests  precision:0.252847  recall:0.22561  f1:0.238453  origin:492  found:439  right:111
+2022-10-24 11:59:16 - train_CME.py[line:133] - INFO: -- item:  work_for  precision:0.527778  recall:0.296875  f1:0.38  origin:192  found:108  right:57
+2022-10-24 11:59:16 - train_CME.py[line:133] - INFO: -- item:  work_record  precision:0.353659  recall:0.095395  f1:0.150259  origin:304  found:82  right:29
+2022-10-24 11:59:16 - train_CME.py[line:133] - INFO: -- item:  education  precision:0.575758  recall:0.222222  f1:0.320675  origin:171  found:66  right:38
+2022-10-24 11:59:16 - train_CME.py[line:133] - INFO: -- item:  awards  precision:0.544627  recall:0.544627  f1:0.544627  origin:549  found:549  right:299
+2022-10-24 11:59:16 - train_CME.py[line:133] - INFO: -- item:  honorary_title  precision:0.358025  recall:0.119342  f1:0.179012  origin:243  found:81  right:29
+2022-10-24 11:59:16 - train_CME.py[line:133] - INFO: -- item:  birthday  precision:0.813953  recall:0.972222  f1:0.886076  origin:36  found:43  right:35
+2022-10-24 11:59:16 - train_CME.py[line:133] - INFO: -- item:  birth_place  precision:0.72093  recall:0.738095  f1:0.729412  origin:42  found:43  right:31
+2022-10-24 11:59:20 - train_CME.py[line:112] - INFO: trian_loss:0.343056	 train_f1:0.861538
+2022-10-24 11:59:46 - train_CME.py[line:112] - INFO: trian_loss:0.387651	 train_f1:0.862874
+2022-10-24 12:00:15 - train_CME.py[line:131] - INFO: 
+Eval  precision:0.492394  recall:0.371826  f1:0.4237  origin:3308  found:2498  right:1230
+2022-10-24 12:00:15 - train_CME.py[line:133] - INFO: -- item:  highest_education  precision:0.811518  recall:0.798969  f1:0.805195  origin:194  found:191  right:155
+2022-10-24 12:00:15 - train_CME.py[line:133] - INFO: -- item:  title  precision:0.454545  recall:0.425  f1:0.439276  origin:200  found:187  right:85
+2022-10-24 12:00:15 - train_CME.py[line:133] - INFO: -- item:  take_office  precision:0.2949  recall:0.213141  f1:0.247442  origin:624  found:451  right:133
+2022-10-24 12:00:15 - train_CME.py[line:133] - INFO: -- item:  gender  precision:0.840741  recall:0.869732  f1:0.854991  origin:261  found:270  right:227
+2022-10-24 12:00:15 - train_CME.py[line:133] - INFO: -- item:  research_interests  precision:0.300813  recall:0.22561  f1:0.25784  origin:492  found:369  right:111
+2022-10-24 12:00:15 - train_CME.py[line:133] - INFO: -- item:  work_for  precision:0.513514  recall:0.296875  f1:0.376238  origin:192  found:111  right:57
+2022-10-24 12:00:15 - train_CME.py[line:133] - INFO: -- item:  work_record  precision:0.240838  recall:0.151316  f1:0.185859  origin:304  found:191  right:46
+2022-10-24 12:00:15 - train_CME.py[line:133] - INFO: -- item:  education  precision:0.554348  recall:0.298246  f1:0.387833  origin:171  found:92  right:51
+2022-10-24 12:00:15 - train_CME.py[line:133] - INFO: -- item:  awards  precision:0.560976  recall:0.502732  f1:0.530259  origin:549  found:492  right:276
+2022-10-24 12:00:15 - train_CME.py[line:133] - INFO: -- item:  honorary_title  precision:0.396552  recall:0.09465  f1:0.152824  origin:243  found:58  right:23
+2022-10-24 12:00:15 - train_CME.py[line:133] - INFO: -- item:  birthday  precision:0.809524  recall:0.944444  f1:0.871795  origin:36  found:42  right:34
+2022-10-24 12:00:15 - train_CME.py[line:133] - INFO: -- item:  birth_place  precision:0.727273  recall:0.761905  f1:0.744186  origin:42  found:44  right:32
+2022-10-24 12:00:20 - train_CME.py[line:112] - INFO: trian_loss:0.290042	 train_f1:0.914062
+2022-10-24 12:00:44 - train_CME.py[line:112] - INFO: trian_loss:0.354933	 train_f1:0.873458
+2022-10-24 12:01:14 - train_CME.py[line:131] - INFO: 
+Eval  precision:0.488042  recall:0.363966  f1:0.41697  origin:3308  found:2467  right:1204
+2022-10-24 12:01:14 - train_CME.py[line:133] - INFO: -- item:  highest_education  precision:0.811518  recall:0.798969  f1:0.805195  origin:194  found:191  right:155
+2022-10-24 12:01:14 - train_CME.py[line:133] - INFO: -- item:  title  precision:0.533333  recall:0.36  f1:0.429851  origin:200  found:135  right:72
+2022-10-24 12:01:14 - train_CME.py[line:133] - INFO: -- item:  take_office  precision:0.278689  recall:0.217949  f1:0.244604  origin:624  found:488  right:136
+2022-10-24 12:01:14 - train_CME.py[line:133] - INFO: -- item:  gender  precision:0.824176  recall:0.862069  f1:0.842697  origin:261  found:273  right:225
+2022-10-24 12:01:14 - train_CME.py[line:133] - INFO: -- item:  research_interests  precision:0.245413  recall:0.21748  f1:0.230603  origin:492  found:436  right:107
+2022-10-24 12:01:14 - train_CME.py[line:133] - INFO: -- item:  work_for  precision:0.5  recall:0.317708  f1:0.388535  origin:192  found:122  right:61
+2022-10-24 12:01:14 - train_CME.py[line:133] - INFO: -- item:  work_record  precision:0.414286  recall:0.095395  f1:0.15508  origin:304  found:70  right:29
+2022-10-24 12:01:14 - train_CME.py[line:133] - INFO: -- item:  education  precision:0.541667  recall:0.22807  f1:0.320988  origin:171  found:72  right:39
+2022-10-24 12:01:14 - train_CME.py[line:133] - INFO: -- item:  awards  precision:0.555126  recall:0.522769  f1:0.538462  origin:549  found:517  right:287
+2022-10-24 12:01:14 - train_CME.py[line:133] - INFO: -- item:  honorary_title  precision:0.346154  recall:0.111111  f1:0.168224  origin:243  found:78  right:27
+2022-10-24 12:01:14 - train_CME.py[line:133] - INFO: -- item:  birthday  precision:0.795455  recall:0.972222  f1:0.875  origin:36  found:44  right:35
+2022-10-24 12:01:14 - train_CME.py[line:133] - INFO: -- item:  birth_place  precision:0.756098  recall:0.738095  f1:0.746988  origin:42  found:41  right:31
+2022-10-24 12:01:19 - train_CME.py[line:112] - INFO: trian_loss:0.239255	 train_f1:0.941634
+2022-10-24 12:01:44 - train_CME.py[line:112] - INFO: trian_loss:0.340007	 train_f1:0.875400
+2022-10-24 12:02:14 - train_CME.py[line:131] - INFO: 
+Eval  precision:0.480632  recall:0.367594  f1:0.416581  origin:3308  found:2530  right:1216
+2022-10-24 12:02:14 - train_CME.py[line:133] - INFO: -- item:  highest_education  precision:0.813472  recall:0.809278  f1:0.81137  origin:194  found:193  right:157
+2022-10-24 12:02:14 - train_CME.py[line:133] - INFO: -- item:  title  precision:0.52  recall:0.39  f1:0.445714  origin:200  found:150  right:78
+2022-10-24 12:02:14 - train_CME.py[line:133] - INFO: -- item:  take_office  precision:0.270903  recall:0.259615  f1:0.265139  origin:624  found:598  right:162
+2022-10-24 12:02:14 - train_CME.py[line:133] - INFO: -- item:  gender  precision:0.835878  recall:0.83908  f1:0.837476  origin:261  found:262  right:219
+2022-10-24 12:02:14 - train_CME.py[line:133] - INFO: -- item:  research_interests  precision:0.25  recall:0.223577  f1:0.236052  origin:492  found:440  right:110
+2022-10-24 12:02:14 - train_CME.py[line:133] - INFO: -- item:  work_for  precision:0.521368  recall:0.317708  f1:0.394822  origin:192  found:117  right:61
+2022-10-24 12:02:14 - train_CME.py[line:133] - INFO: -- item:  work_record  precision:0.333333  recall:0.092105  f1:0.14433  origin:304  found:84  right:28
+2022-10-24 12:02:14 - train_CME.py[line:133] - INFO: -- item:  education  precision:0.522388  recall:0.204678  f1:0.294118  origin:171  found:67  right:35
+2022-10-24 12:02:14 - train_CME.py[line:133] - INFO: -- item:  awards  precision:0.591006  recall:0.502732  f1:0.543307  origin:549  found:467  right:276
+2022-10-24 12:02:14 - train_CME.py[line:133] - INFO: -- item:  honorary_title  precision:0.371429  recall:0.106996  f1:0.166134  origin:243  found:70  right:26
+2022-10-24 12:02:14 - train_CME.py[line:133] - INFO: -- item:  birthday  precision:0.825  recall:0.916667  f1:0.868421  origin:36  found:40  right:33
+2022-10-24 12:02:14 - train_CME.py[line:133] - INFO: -- item:  birth_place  precision:0.738095  recall:0.738095  f1:0.738095  origin:42  found:42  right:31
+2022-10-24 12:02:19 - train_CME.py[line:112] - INFO: trian_loss:0.285097	 train_f1:0.903704
+2022-10-24 12:02:45 - train_CME.py[line:112] - INFO: trian_loss:0.300434	 train_f1:0.898361
+2022-10-24 12:03:16 - train_CME.py[line:131] - INFO: 
+Eval  precision:0.473143  recall:0.375453  f1:0.418675  origin:3308  found:2625  right:1242
+2022-10-24 12:03:16 - train_CME.py[line:133] - INFO: -- item:  highest_education  precision:0.830688  recall:0.809278  f1:0.819843  origin:194  found:189  right:157
+2022-10-24 12:03:16 - train_CME.py[line:133] - INFO: -- item:  title  precision:0.433673  recall:0.425  f1:0.429293  origin:200  found:196  right:85
+2022-10-24 12:03:16 - train_CME.py[line:133] - INFO: -- item:  take_office  precision:0.273408  recall:0.233974  f1:0.252159  origin:624  found:534  right:146
+2022-10-24 12:03:16 - train_CME.py[line:133] - INFO: -- item:  gender  precision:0.835165  recall:0.873563  f1:0.853933  origin:261  found:273  right:228
+2022-10-24 12:03:16 - train_CME.py[line:133] - INFO: -- item:  research_interests  precision:0.230769  recall:0.182927  f1:0.204082  origin:492  found:390  right:90
+2022-10-24 12:03:16 - train_CME.py[line:133] - INFO: -- item:  work_for  precision:0.504  recall:0.328125  f1:0.397476  origin:192  found:125  right:63
+2022-10-24 12:03:16 - train_CME.py[line:133] - INFO: -- item:  work_record  precision:0.348485  recall:0.075658  f1:0.124324  origin:304  found:66  right:23
+2022-10-24 12:03:16 - train_CME.py[line:133] - INFO: -- item:  education  precision:0.526882  recall:0.28655  f1:0.371212  origin:171  found:93  right:49
+2022-10-24 12:03:16 - train_CME.py[line:133] - INFO: -- item:  awards  precision:0.530756  recall:0.550091  f1:0.54025  origin:549  found:569  right:302
+2022-10-24 12:03:16 - train_CME.py[line:133] - INFO: -- item:  honorary_title  precision:0.326923  recall:0.139918  f1:0.195965  origin:243  found:104  right:34
+2022-10-24 12:03:16 - train_CME.py[line:133] - INFO: -- item:  birthday  precision:0.804878  recall:0.916667  f1:0.857143  origin:36  found:41  right:33
+2022-10-24 12:03:16 - train_CME.py[line:133] - INFO: -- item:  birth_place  precision:0.711111  recall:0.761905  f1:0.735632  origin:42  found:45  right:32
+2022-10-24 12:03:20 - train_CME.py[line:112] - INFO: trian_loss:0.345381	 train_f1:0.784810
+2022-10-24 12:03:46 - train_CME.py[line:112] - INFO: trian_loss:0.273204	 train_f1:0.908552
+2022-10-24 12:04:19 - train_CME.py[line:131] - INFO: 
+Eval  precision:0.474755  recall:0.380895  f1:0.422677  origin:3308  found:2654  right:1260
+2022-10-24 12:04:19 - train_CME.py[line:133] - INFO: -- item:  highest_education  precision:0.819588  recall:0.819588  f1:0.819588  origin:194  found:194  right:159
+2022-10-24 12:04:19 - train_CME.py[line:133] - INFO: -- item:  title  precision:0.528169  recall:0.375  f1:0.438596  origin:200  found:142  right:75
+2022-10-24 12:04:19 - train_CME.py[line:133] - INFO: -- item:  take_office  precision:0.277338  recall:0.280449  f1:0.278884  origin:624  found:631  right:175
+2022-10-24 12:04:19 - train_CME.py[line:133] - INFO: -- item:  gender  precision:0.840149  recall:0.8659  f1:0.85283  origin:261  found:269  right:226
+2022-10-24 12:04:19 - train_CME.py[line:133] - INFO: -- item:  research_interests  precision:0.259169  recall:0.215447  f1:0.235294  origin:492  found:409  right:106
+2022-10-24 12:04:19 - train_CME.py[line:133] - INFO: -- item:  work_for  precision:0.491525  recall:0.302083  f1:0.374194  origin:192  found:118  right:58
+2022-10-24 12:04:19 - train_CME.py[line:133] - INFO: -- item:  work_record  precision:0.322581  recall:0.098684  f1:0.151134  origin:304  found:93  right:30
+2022-10-24 12:04:19 - train_CME.py[line:133] - INFO: -- item:  education  precision:0.554054  recall:0.239766  f1:0.334694  origin:171  found:74  right:41
+2022-10-24 12:04:19 - train_CME.py[line:133] - INFO: -- item:  awards  precision:0.54159  recall:0.533698  f1:0.537615  origin:549  found:541  right:293
+2022-10-24 12:04:19 - train_CME.py[line:133] - INFO: -- item:  honorary_title  precision:0.333333  recall:0.139918  f1:0.197101  origin:243  found:102  right:34
+2022-10-24 12:04:19 - train_CME.py[line:133] - INFO: -- item:  birthday  precision:0.820513  recall:0.888889  f1:0.853333  origin:36  found:39  right:32
+2022-10-24 12:04:19 - train_CME.py[line:133] - INFO: -- item:  birth_place  precision:0.738095  recall:0.738095  f1:0.738095  origin:42  found:42  right:31
+2022-10-24 12:04:23 - train_CME.py[line:112] - INFO: trian_loss:0.242597	 train_f1:0.869955
+2022-10-24 12:04:45 - train_CME.py[line:112] - INFO: trian_loss:0.280883	 train_f1:0.908551
+2022-10-24 12:05:16 - train_CME.py[line:131] - INFO: 
+Eval  precision:0.473211  recall:0.36578  f1:0.412617  origin:3308  found:2557  right:1210
+2022-10-24 12:05:16 - train_CME.py[line:133] - INFO: -- item:  highest_education  precision:0.819149  recall:0.793814  f1:0.806283  origin:194  found:188  right:154
+2022-10-24 12:05:16 - train_CME.py[line:133] - INFO: -- item:  title  precision:0.507042  recall:0.36  f1:0.421053  origin:200  found:142  right:72
+2022-10-24 12:05:16 - train_CME.py[line:133] - INFO: -- item:  take_office  precision:0.28373  recall:0.229167  f1:0.253546  origin:624  found:504  right:143
+2022-10-24 12:05:16 - train_CME.py[line:133] - INFO: -- item:  gender  precision:0.864  recall:0.827586  f1:0.845401  origin:261  found:250  right:216
+2022-10-24 12:05:16 - train_CME.py[line:133] - INFO: -- item:  research_interests  precision:0.235178  recall:0.24187  f1:0.238477  origin:492  found:506  right:119
+2022-10-24 12:05:16 - train_CME.py[line:133] - INFO: -- item:  work_for  precision:0.517241  recall:0.3125  f1:0.38961  origin:192  found:116  right:60
+2022-10-24 12:05:16 - train_CME.py[line:133] - INFO: -- item:  work_record  precision:0.321429  recall:0.088816  f1:0.139175  origin:304  found:84  right:27
+2022-10-24 12:05:16 - train_CME.py[line:133] - INFO: -- item:  education  precision:0.569444  recall:0.239766  f1:0.337449  origin:171  found:72  right:41
+2022-10-24 12:05:16 - train_CME.py[line:133] - INFO: -- item:  awards  precision:0.549902  recall:0.51184  f1:0.530189  origin:549  found:511  right:281
+2022-10-24 12:05:16 - train_CME.py[line:133] - INFO: -- item:  honorary_title  precision:0.33  recall:0.135802  f1:0.19242  origin:243  found:100  right:33
+2022-10-24 12:05:16 - train_CME.py[line:133] - INFO: -- item:  birthday  precision:0.804878  recall:0.916667  f1:0.857143  origin:36  found:41  right:33
+2022-10-24 12:05:16 - train_CME.py[line:133] - INFO: -- item:  birth_place  precision:0.72093  recall:0.738095  f1:0.729412  origin:42  found:43  right:31
+2022-10-24 12:05:20 - train_CME.py[line:112] - INFO: trian_loss:0.182622	 train_f1:0.936709
+2022-10-24 12:05:44 - train_CME.py[line:112] - INFO: trian_loss:0.248913	 train_f1:0.916074
+2022-10-24 12:06:17 - train_CME.py[line:131] - INFO: 
+Eval  precision:0.481613  recall:0.368198  f1:0.417338  origin:3308  found:2529  right:1218
+2022-10-24 12:06:17 - train_CME.py[line:133] - INFO: -- item:  highest_education  precision:0.82199  recall:0.809278  f1:0.815584  origin:194  found:191  right:157
+2022-10-24 12:06:17 - train_CME.py[line:133] - INFO: -- item:  title  precision:0.496732  recall:0.38  f1:0.430595  origin:200  found:153  right:76
+2022-10-24 12:06:17 - train_CME.py[line:133] - INFO: -- item:  take_office  precision:0.28903  recall:0.219551  f1:0.249545  origin:624  found:474  right:137
+2022-10-24 12:06:17 - train_CME.py[line:133] - INFO: -- item:  gender  precision:0.837736  recall:0.850575  f1:0.844106  origin:261  found:265  right:222
+2022-10-24 12:06:17 - train_CME.py[line:133] - INFO: -- item:  research_interests  precision:0.255814  recall:0.223577  f1:0.238612  origin:492  found:430  right:110
+2022-10-24 12:06:17 - train_CME.py[line:133] - INFO: -- item:  work_for  precision:0.513761  recall:0.291667  f1:0.372093  origin:192  found:109  right:56
+2022-10-24 12:06:17 - train_CME.py[line:133] - INFO: -- item:  work_record  precision:0.325581  recall:0.092105  f1:0.14359  origin:304  found:86  right:28
+2022-10-24 12:06:17 - train_CME.py[line:133] - INFO: -- item:  education  precision:0.538462  recall:0.245614  f1:0.337349  origin:171  found:78  right:42
+2022-10-24 12:06:17 - train_CME.py[line:133] - INFO: -- item:  awards  precision:0.521201  recall:0.537341  f1:0.529148  origin:549  found:566  right:295
+2022-10-24 12:06:17 - train_CME.py[line:133] - INFO: -- item:  honorary_title  precision:0.322581  recall:0.123457  f1:0.178571  origin:243  found:93  right:30
+2022-10-24 12:06:17 - train_CME.py[line:133] - INFO: -- item:  birthday  precision:0.804878  recall:0.916667  f1:0.857143  origin:36  found:41  right:33
+2022-10-24 12:06:17 - train_CME.py[line:133] - INFO: -- item:  birth_place  precision:0.744186  recall:0.761905  f1:0.752941  origin:42  found:43  right:32
+2022-10-24 12:06:21 - train_CME.py[line:112] - INFO: trian_loss:0.127574	 train_f1:0.992366
+2022-10-24 12:06:48 - train_CME.py[line:112] - INFO: trian_loss:0.256348	 train_f1:0.919494
+2022-10-24 12:07:20 - train_CME.py[line:131] - INFO: 
+Eval  precision:0.495949  recall:0.351572  f1:0.411463  origin:3308  found:2345  right:1163
+2022-10-24 12:07:20 - train_CME.py[line:133] - INFO: -- item:  highest_education  precision:0.836066  recall:0.78866  f1:0.811671  origin:194  found:183  right:153
+2022-10-24 12:07:20 - train_CME.py[line:133] - INFO: -- item:  title  precision:0.5  recall:0.355  f1:0.415205  origin:200  found:142  right:71
+2022-10-24 12:07:20 - train_CME.py[line:133] - INFO: -- item:  take_office  precision:0.279412  recall:0.213141  f1:0.241818  origin:624  found:476  right:133
+2022-10-24 12:07:20 - train_CME.py[line:133] - INFO: -- item:  gender  precision:0.868526  recall:0.835249  f1:0.851562  origin:261  found:251  right:218
+2022-10-24 12:07:20 - train_CME.py[line:133] - INFO: -- item:  research_interests  precision:0.262899  recall:0.21748  f1:0.238042  origin:492  found:407  right:107
+2022-10-24 12:07:20 - train_CME.py[line:133] - INFO: -- item:  work_for  precision:0.541667  recall:0.270833  f1:0.361111  origin:192  found:96  right:52
+2022-10-24 12:07:20 - train_CME.py[line:133] - INFO: -- item:  work_record  precision:0.412698  recall:0.085526  f1:0.141689  origin:304  found:63  right:26
+2022-10-24 12:07:20 - train_CME.py[line:133] - INFO: -- item:  education  precision:0.514286  recall:0.210526  f1:0.298755  origin:171  found:70  right:36
+2022-10-24 12:07:20 - train_CME.py[line:133] - INFO: -- item:  awards  precision:0.570231  recall:0.495446  f1:0.530214  origin:549  found:477  right:272
+2022-10-24 12:07:20 - train_CME.py[line:133] - INFO: -- item:  honorary_title  precision:0.326531  recall:0.131687  f1:0.187683  origin:243  found:98  right:32
+2022-10-24 12:07:20 - train_CME.py[line:133] - INFO: -- item:  birthday  precision:0.820513  recall:0.888889  f1:0.853333  origin:36  found:39  right:32
+2022-10-24 12:07:20 - train_CME.py[line:133] - INFO: -- item:  birth_place  precision:0.72093  recall:0.738095  f1:0.729412  origin:42  found:43  right:31
+2022-10-24 12:07:24 - train_CME.py[line:112] - INFO: trian_loss:0.411008	 train_f1:0.870712
+2022-10-24 12:07:50 - train_CME.py[line:112] - INFO: trian_loss:0.249784	 train_f1:0.919763
+2022-10-24 12:08:20 - train_CME.py[line:131] - INFO: 
+Eval  precision:0.478055  recall:0.365478  f1:0.414254  origin:3308  found:2529  right:1209
+2022-10-24 12:08:20 - train_CME.py[line:133] - INFO: -- item:  highest_education  precision:0.826316  recall:0.809278  f1:0.817708  origin:194  found:190  right:157
+2022-10-24 12:08:20 - train_CME.py[line:133] - INFO: -- item:  title  precision:0.466258  recall:0.38  f1:0.418733  origin:200  found:163  right:76
+2022-10-24 12:08:20 - train_CME.py[line:133] - INFO: -- item:  take_office  precision:0.27037  recall:0.233974  f1:0.250859  origin:624  found:540  right:146
+2022-10-24 12:08:20 - train_CME.py[line:133] - INFO: -- item:  gender  precision:0.854406  recall:0.854406  f1:0.854406  origin:261  found:261  right:223
+2022-10-24 12:08:20 - train_CME.py[line:133] - INFO: -- item:  research_interests  precision:0.247191  recall:0.223577  f1:0.234792  origin:492  found:445  right:110
+2022-10-24 12:08:20 - train_CME.py[line:133] - INFO: -- item:  work_for  precision:0.526786  recall:0.307292  f1:0.388158  origin:192  found:112  right:59
+2022-10-24 12:08:20 - train_CME.py[line:133] - INFO: -- item:  work_record  precision:0.403226  recall:0.082237  f1:0.136612  origin:304  found:62  right:25
+2022-10-24 12:08:20 - train_CME.py[line:133] - INFO: -- item:  education  precision:0.52  recall:0.22807  f1:0.317073  origin:171  found:75  right:39
+2022-10-24 12:08:20 - train_CME.py[line:133] - INFO: -- item:  awards  precision:0.550495  recall:0.506375  f1:0.527514  origin:549  found:505  right:278
+2022-10-24 12:08:20 - train_CME.py[line:133] - INFO: -- item:  honorary_title  precision:0.344086  recall:0.131687  f1:0.190476  origin:243  found:93  right:32
+2022-10-24 12:08:20 - train_CME.py[line:133] - INFO: -- item:  birthday  precision:0.825  recall:0.916667  f1:0.868421  origin:36  found:40  right:33
+2022-10-24 12:08:20 - train_CME.py[line:133] - INFO: -- item:  birth_place  precision:0.72093  recall:0.738095  f1:0.729412  origin:42  found:43  right:31
+2022-10-24 12:08:24 - train_CME.py[line:112] - INFO: trian_loss:0.256869	 train_f1:0.947674
+2022-10-24 12:08:50 - train_CME.py[line:112] - INFO: trian_loss:0.224797	 train_f1:0.933726
+2022-10-24 12:09:21 - train_CME.py[line:131] - INFO: 
+Eval  precision:0.479937  recall:0.368803  f1:0.417094  origin:3308  found:2542  right:1220
+2022-10-24 12:09:21 - train_CME.py[line:133] - INFO: -- item:  highest_education  precision:0.843243  recall:0.804124  f1:0.823219  origin:194  found:185  right:156
+2022-10-24 12:09:21 - train_CME.py[line:133] - INFO: -- item:  title  precision:0.49359  recall:0.385  f1:0.432584  origin:200  found:156  right:77
+2022-10-24 12:09:21 - train_CME.py[line:133] - INFO: -- item:  take_office  precision:0.284658  recall:0.246795  f1:0.264378  origin:624  found:541  right:154
+2022-10-24 12:09:21 - train_CME.py[line:133] - INFO: -- item:  gender  precision:0.863813  recall:0.850575  f1:0.857143  origin:261  found:257  right:222
+2022-10-24 12:09:21 - train_CME.py[line:133] - INFO: -- item:  research_interests  precision:0.243304  recall:0.221545  f1:0.231915  origin:492  found:448  right:109
+2022-10-24 12:09:21 - train_CME.py[line:133] - INFO: -- item:  work_for  precision:0.526786  recall:0.307292  f1:0.388158  origin:192  found:112  right:59
+2022-10-24 12:09:21 - train_CME.py[line:133] - INFO: -- item:  work_record  precision:0.318182  recall:0.092105  f1:0.142857  origin:304  found:88  right:28
+2022-10-24 12:09:21 - train_CME.py[line:133] - INFO: -- item:  education  precision:0.56338  recall:0.233918  f1:0.330579  origin:171  found:71  right:40
+2022-10-24 12:09:21 - train_CME.py[line:133] - INFO: -- item:  awards  precision:0.545455  recall:0.513661  f1:0.529081  origin:549  found:517  right:282
+2022-10-24 12:09:21 - train_CME.py[line:133] - INFO: -- item:  honorary_title  precision:0.341176  recall:0.119342  f1:0.176829  origin:243  found:85  right:29
+2022-10-24 12:09:21 - train_CME.py[line:133] - INFO: -- item:  birthday  precision:0.825  recall:0.916667  f1:0.868421  origin:36  found:40  right:33
+2022-10-24 12:09:21 - train_CME.py[line:133] - INFO: -- item:  birth_place  precision:0.738095  recall:0.738095  f1:0.738095  origin:42  found:42  right:31
+2022-10-24 12:09:25 - train_CME.py[line:112] - INFO: trian_loss:0.242084	 train_f1:0.931596
+2022-10-24 12:09:50 - train_CME.py[line:112] - INFO: trian_loss:0.212890	 train_f1:0.939210
+2022-10-24 12:10:20 - train_CME.py[line:131] - INFO: 
+Eval  precision:0.463127  recall:0.379686  f1:0.417276  origin:3308  found:2712  right:1256
+2022-10-24 12:10:20 - train_CME.py[line:133] - INFO: -- item:  highest_education  precision:0.827957  recall:0.793814  f1:0.810526  origin:194  found:186  right:154
+2022-10-24 12:10:20 - train_CME.py[line:133] - INFO: -- item:  title  precision:0.5  recall:0.4  f1:0.444444  origin:200  found:160  right:80
+2022-10-24 12:10:20 - train_CME.py[line:133] - INFO: -- item:  take_office  precision:0.272572  recall:0.25641  f1:0.264244  origin:624  found:587  right:160
+2022-10-24 12:10:20 - train_CME.py[line:133] - INFO: -- item:  gender  precision:0.869048  recall:0.83908  f1:0.853801  origin:261  found:252  right:219
+2022-10-24 12:10:20 - train_CME.py[line:133] - INFO: -- item:  research_interests  precision:0.238659  recall:0.245935  f1:0.242242  origin:492  found:507  right:121
+2022-10-24 12:10:20 - train_CME.py[line:133] - INFO: -- item:  work_for  precision:0.491667  recall:0.307292  f1:0.378205  origin:192  found:120  right:59
+2022-10-24 12:10:20 - train_CME.py[line:133] - INFO: -- item:  work_record  precision:0.352273  recall:0.101974  f1:0.158163  origin:304  found:88  right:31
+2022-10-24 12:10:20 - train_CME.py[line:133] - INFO: -- item:  education  precision:0.554054  recall:0.239766  f1:0.334694  origin:171  found:74  right:41
+2022-10-24 12:10:20 - train_CME.py[line:133] - INFO: -- item:  awards  precision:0.541045  recall:0.528233  f1:0.534562  origin:549  found:536  right:290
+2022-10-24 12:10:20 - train_CME.py[line:133] - INFO: -- item:  honorary_title  precision:0.310924  recall:0.152263  f1:0.20442  origin:243  found:119  right:37
+2022-10-24 12:10:20 - train_CME.py[line:133] - INFO: -- item:  birthday  precision:0.804878  recall:0.916667  f1:0.857143  origin:36  found:41  right:33
+2022-10-24 12:10:20 - train_CME.py[line:133] - INFO: -- item:  birth_place  precision:0.738095  recall:0.738095  f1:0.738095  origin:42  found:42  right:31
+2022-10-24 12:10:25 - train_CME.py[line:112] - INFO: trian_loss:0.286084	 train_f1:0.881459
+2022-10-24 12:10:50 - train_CME.py[line:112] - INFO: trian_loss:0.218005	 train_f1:0.934579
+2022-10-24 12:11:21 - train_CME.py[line:131] - INFO: 
+Eval  precision:0.479044  recall:0.36971  f1:0.417335  origin:3308  found:2553  right:1223
+2022-10-24 12:11:21 - train_CME.py[line:133] - INFO: -- item:  highest_education  precision:0.827957  recall:0.793814  f1:0.810526  origin:194  found:186  right:154
+2022-10-24 12:11:21 - train_CME.py[line:133] - INFO: -- item:  title  precision:0.5  recall:0.365  f1:0.421965  origin:200  found:146  right:73
+2022-10-24 12:11:21 - train_CME.py[line:133] - INFO: -- item:  take_office  precision:0.27955  recall:0.238782  f1:0.257563  origin:624  found:533  right:149
+2022-10-24 12:11:21 - train_CME.py[line:133] - INFO: -- item:  gender  precision:0.855469  recall:0.83908  f1:0.847195  origin:261  found:256  right:219
+2022-10-24 12:11:21 - train_CME.py[line:133] - INFO: -- item:  research_interests  precision:0.255411  recall:0.239837  f1:0.247379  origin:492  found:462  right:118
+2022-10-24 12:11:21 - train_CME.py[line:133] - INFO: -- item:  work_for  precision:0.522523  recall:0.302083  f1:0.382838  origin:192  found:111  right:58
+2022-10-24 12:11:21 - train_CME.py[line:133] - INFO: -- item:  work_record  precision:0.352941  recall:0.098684  f1:0.154242  origin:304  found:85  right:30
+2022-10-24 12:11:21 - train_CME.py[line:133] - INFO: -- item:  education  precision:0.533333  recall:0.233918  f1:0.325203  origin:171  found:75  right:40
+2022-10-24 12:11:21 - train_CME.py[line:133] - INFO: -- item:  awards  precision:0.554475  recall:0.519126  f1:0.536218  origin:549  found:514  right:285
+2022-10-24 12:11:21 - train_CME.py[line:133] - INFO: -- item:  honorary_title  precision:0.320388  recall:0.135802  f1:0.190751  origin:243  found:103  right:33
+2022-10-24 12:11:21 - train_CME.py[line:133] - INFO: -- item:  birthday  precision:0.804878  recall:0.916667  f1:0.857143  origin:36  found:41  right:33
+2022-10-24 12:11:21 - train_CME.py[line:133] - INFO: -- item:  birth_place  precision:0.756098  recall:0.738095  f1:0.746988  origin:42  found:41  right:31
+2022-10-24 12:11:25 - train_CME.py[line:112] - INFO: trian_loss:0.206358	 train_f1:0.912892
+2022-10-24 12:11:49 - train_CME.py[line:112] - INFO: trian_loss:0.206689	 train_f1:0.936550
+2022-10-24 12:12:20 - train_CME.py[line:131] - INFO: 
+Eval  precision:0.47316  recall:0.373035  f1:0.417174  origin:3308  found:2608  right:1234
+2022-10-24 12:12:20 - train_CME.py[line:133] - INFO: -- item:  highest_education  precision:0.828877  recall:0.798969  f1:0.813648  origin:194  found:187  right:155
+2022-10-24 12:12:20 - train_CME.py[line:133] - INFO: -- item:  title  precision:0.472393  recall:0.385  f1:0.424242  origin:200  found:163  right:77
+2022-10-24 12:12:20 - train_CME.py[line:133] - INFO: -- item:  take_office  precision:0.276173  recall:0.245192  f1:0.259762  origin:624  found:554  right:153
+2022-10-24 12:12:20 - train_CME.py[line:133] - INFO: -- item:  gender  precision:0.866142  recall:0.842912  f1:0.854369  origin:261  found:254  right:220
+2022-10-24 12:12:20 - train_CME.py[line:133] - INFO: -- item:  research_interests  precision:0.249438  recall:0.22561  f1:0.236926  origin:492  found:445  right:111
+2022-10-24 12:12:20 - train_CME.py[line:133] - INFO: -- item:  work_for  precision:0.487805  recall:0.3125  f1:0.380952  origin:192  found:123  right:60
+2022-10-24 12:12:20 - train_CME.py[line:133] - INFO: -- item:  work_record  precision:0.386667  recall:0.095395  f1:0.153034  origin:304  found:75  right:29
+2022-10-24 12:12:20 - train_CME.py[line:133] - INFO: -- item:  education  precision:0.555556  recall:0.233918  f1:0.329218  origin:171  found:72  right:40
+2022-10-24 12:12:20 - train_CME.py[line:133] - INFO: -- item:  awards  precision:0.528881  recall:0.533698  f1:0.531278  origin:549  found:554  right:293
+2022-10-24 12:12:20 - train_CME.py[line:133] - INFO: -- item:  honorary_title  precision:0.326531  recall:0.131687  f1:0.187683  origin:243  found:98  right:32
+2022-10-24 12:12:20 - train_CME.py[line:133] - INFO: -- item:  birthday  precision:0.804878  recall:0.916667  f1:0.857143  origin:36  found:41  right:33
+2022-10-24 12:12:20 - train_CME.py[line:133] - INFO: -- item:  birth_place  precision:0.738095  recall:0.738095  f1:0.738095  origin:42  found:42  right:31
+2022-10-24 12:12:26 - train_CME.py[line:112] - INFO: trian_loss:0.191474	 train_f1:0.940063
+2022-10-24 12:12:51 - train_CME.py[line:112] - INFO: trian_loss:0.191451	 train_f1:0.944069
+2022-10-24 12:13:20 - train_CME.py[line:131] - INFO: 
+Eval  precision:0.473483  recall:0.375151  f1:0.41862  origin:3308  found:2621  right:1241
+2022-10-24 12:13:20 - train_CME.py[line:133] - INFO: -- item:  highest_education  precision:0.827957  recall:0.793814  f1:0.810526  origin:194  found:186  right:154
+2022-10-24 12:13:20 - train_CME.py[line:133] - INFO: -- item:  title  precision:0.506579  recall:0.385  f1:0.4375  origin:200  found:152  right:77
+2022-10-24 12:13:20 - train_CME.py[line:133] - INFO: -- item:  take_office  precision:0.28125  recall:0.245192  f1:0.261986  origin:624  found:544  right:153
+2022-10-24 12:13:20 - train_CME.py[line:133] - INFO: -- item:  gender  precision:0.856589  recall:0.846743  f1:0.851638  origin:261  found:258  right:221
+2022-10-24 12:13:20 - train_CME.py[line:133] - INFO: -- item:  research_interests  precision:0.238397  recall:0.229675  f1:0.233954  origin:492  found:474  right:113
+2022-10-24 12:13:20 - train_CME.py[line:133] - INFO: -- item:  work_for  precision:0.508621  recall:0.307292  f1:0.383117  origin:192  found:116  right:59
+2022-10-24 12:13:20 - train_CME.py[line:133] - INFO: -- item:  work_record  precision:0.337079  recall:0.098684  f1:0.152672  origin:304  found:89  right:30
+2022-10-24 12:13:20 - train_CME.py[line:133] - INFO: -- item:  education  precision:0.556962  recall:0.25731  f1:0.352  origin:171  found:79  right:44
+2022-10-24 12:13:20 - train_CME.py[line:133] - INFO: -- item:  awards  precision:0.542435  recall:0.535519  f1:0.538955  origin:549  found:542  right:294
+2022-10-24 12:13:20 - train_CME.py[line:133] - INFO: -- item:  honorary_title  precision:0.326531  recall:0.131687  f1:0.187683  origin:243  found:98  right:32
+2022-10-24 12:13:20 - train_CME.py[line:133] - INFO: -- item:  birthday  precision:0.804878  recall:0.916667  f1:0.857143  origin:36  found:41  right:33
+2022-10-24 12:13:20 - train_CME.py[line:133] - INFO: -- item:  birth_place  precision:0.738095  recall:0.738095  f1:0.738095  origin:42  found:42  right:31
+2022-10-24 12:13:25 - train_CME.py[line:112] - INFO: trian_loss:0.190867	 train_f1:0.921429
+2022-10-24 12:13:48 - train_CME.py[line:112] - INFO: trian_loss:0.204275	 train_f1:0.945302
+2022-10-24 12:14:18 - train_CME.py[line:131] - INFO: 
+Eval  precision:0.478802  recall:0.372128  f1:0.418779  origin:3308  found:2571  right:1231
+2022-10-24 12:14:18 - train_CME.py[line:133] - INFO: -- item:  highest_education  precision:0.828877  recall:0.798969  f1:0.813648  origin:194  found:187  right:155
+2022-10-24 12:14:18 - train_CME.py[line:133] - INFO: -- item:  title  precision:0.503268  recall:0.385  f1:0.436261  origin:200  found:153  right:77
+2022-10-24 12:14:18 - train_CME.py[line:133] - INFO: -- item:  take_office  precision:0.281426  recall:0.240385  f1:0.259291  origin:624  found:533  right:150
+2022-10-24 12:14:18 - train_CME.py[line:133] - INFO: -- item:  gender  precision:0.856589  recall:0.846743  f1:0.851638  origin:261  found:258  right:221
+2022-10-24 12:14:18 - train_CME.py[line:133] - INFO: -- item:  research_interests  precision:0.245495  recall:0.221545  f1:0.232906  origin:492  found:444  right:109
+2022-10-24 12:14:18 - train_CME.py[line:133] - INFO: -- item:  work_for  precision:0.491667  recall:0.307292  f1:0.378205  origin:192  found:120  right:59
+2022-10-24 12:14:18 - train_CME.py[line:133] - INFO: -- item:  work_record  precision:0.367089  recall:0.095395  f1:0.151436  origin:304  found:79  right:29
+2022-10-24 12:14:18 - train_CME.py[line:133] - INFO: -- item:  education  precision:0.551282  recall:0.251462  f1:0.345382  origin:171  found:78  right:43
+2022-10-24 12:14:18 - train_CME.py[line:133] - INFO: -- item:  awards  precision:0.539889  recall:0.530055  f1:0.534926  origin:549  found:539  right:291
+2022-10-24 12:14:18 - train_CME.py[line:133] - INFO: -- item:  honorary_title  precision:0.336735  recall:0.135802  f1:0.193548  origin:243  found:98  right:33
+2022-10-24 12:14:18 - train_CME.py[line:133] - INFO: -- item:  birthday  precision:0.825  recall:0.916667  f1:0.868421  origin:36  found:40  right:33
+2022-10-24 12:14:18 - train_CME.py[line:133] - INFO: -- item:  birth_place  precision:0.738095  recall:0.738095  f1:0.738095  origin:42  found:42  right:31
