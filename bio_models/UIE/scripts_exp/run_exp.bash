@@ -3,6 +3,7 @@
 # selected_gpus=${GPU:-"`get_gpu_id $gpu_node`"}
 selected_gpus='1' # '2,3'
 export CUDA_VISIBLE_DEVICES=$selected_gpus
+mkdir output
 
 # Load Hyper-parameters
 IFS=' '

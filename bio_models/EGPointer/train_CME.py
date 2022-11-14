@@ -8,10 +8,10 @@ from utils.logger import logger
 from utils.bert_optimization import BertAdam
 from transformers import set_seed
 
-bert_model_path = '/shenyelin/bio_baselines/PLM/bert-base-uncased' # 模型路径
-train_cme_path = '/shenyelin/bio_baselines/en_bio/en_bio_train.json'  #CMeEE 训练集
-eval_cme_path = '/shenyelin/bio_baselines/en_bio/en_bio_val.json'  #CMeEE 测试集
-device = torch.device("cuda:2")
+bert_model_path = 'bert-base-uncased' # 模型路径
+train_cme_path = '../en_bio/en_bio_train.json'  #CMeEE 训练集
+eval_cme_path = '../en_bio/en_bio_val.json'  #CMeEE 测试集
+device = torch.device("cuda:0")
 
 BATCH_SIZE = 16
 ENT_CLS_NUM = 12 # 分类数量

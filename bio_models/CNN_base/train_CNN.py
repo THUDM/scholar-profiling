@@ -9,6 +9,7 @@ from tqdm import tqdm
 from utils.logger import logger
 from utils.bert_optimization import BertAdam
 from transformers import set_seed
+import os
 import argparse
 
 parser = argparse.ArgumentParser()
@@ -26,10 +27,10 @@ parser.add_argument('--seed', default=2022, type=int)
 
 args = parser.parse_args()
 
-bert_model_path = '/shenyelin/bio_baselines/PLM/bert-base-uncased'
-train_cme_path = '/shenyelin/bio_baselines/en_bio/en_bio_train.json'
-eval_cme_path = '/shenyelin/bio_baselines/en_bio/en_bio_val.json'
-device = torch.device("cuda:1")
+bert_model_path = 'bert-base-uncased'
+train_cme_path = '../en_bio/en_bio_train.json'
+eval_cme_path = '../en_bio/en_bio_val.json'
+device = torch.device("cuda:0")
 
 ENT_CLS_NUM = 12
 
@@ -145,6 +146,7 @@ for eo in range(args.n_epochs):
         logger.info('\nEval  precision:{0}  recall:{1}  f1:{2}  origin:{3}  found:{4}  right:{5}'.format(round(eval_info['acc'],6), round(eval_info['recall'],6), round(eval_info['f1'],6), eval_info['origin'], eval_info['found'], eval_info['right']))
         for item in entity_info.keys():
             logger.info('-- item:  {0}  precision:{1}  recall:{2}  f1:{3}  origin:{4}  found:{5}  right:{6}'.format(item, round(entity_info[item]['acc'],6), round(entity_info[item]['recall'],6), round(entity_info[item]['f1'],6), entity_info[item]['origin'], entity_info[item]['found'], entity_info[item]['right']))
+        os.makedirs("outputs", exist_ok=True)
         torch.save(model.state_dict(), './outputs/TEST_EP_L{}.pth'.format(eo))
         if f > max_f:
             logger.info("find best f1 epoch{}".format(eo))

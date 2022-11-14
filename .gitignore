@@ -1,4 +1,11 @@
 # Byte-compiled / optimized / DLL files
+
+bio_models/UIE/dataset_processing/converted_data/
+bio_models/UIE/hf_models/
+data_ex.zip
+*.pyc
+*outputs/
+*output/
 data/
 output/
 pretrain_models/
