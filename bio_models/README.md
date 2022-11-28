@@ -3,7 +3,9 @@ This folder provides three profiling methods for extracting more than 10 attribu
 ### Implemented Methods
 - CNN [1]
 - EGPointer [2]
-- UIE [3]
+- UIE [3]  
+
+Required pacakges: see `requirements.txt`.
 
 ### Data
 - Dataset used for CNN and EGPointer is located in `bio_models/en_bio`
