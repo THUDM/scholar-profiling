@@ -5,7 +5,10 @@ This folder provides three profiling methods for extracting more than 10 attribu
 - EGPointer [2]
 - UIE [3]  
 
-Required pacakges: see `requirements.txt`.
+### Environment
+- Python 3.8
+- pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 torchaudio==0.8.0 -f https://download.pytorch.org/whl/torch_stable.html
+- Required pacakges: see `requirements.txt`.
 
 ### Data
 - Dataset used for CNN and EGPointer is located in `bio_models/en_bio`
