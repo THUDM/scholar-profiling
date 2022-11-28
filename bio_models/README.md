@@ -40,9 +40,9 @@ python train_CME.py
 python predict_CME.py
 
 # UIE
-cd UIE
-python dataset/data_processing.py
-python dataset_processing/uie_convert.py -format spotasoc -config data_config/en_bio -output en_bio
+cd UIE/dataset_processing
+python uie_convert.py -format spotasoc -config data_config/en_bio -output en_bio
+cd ..
 . config/data_conf/base_model_conf_en_bio.ini  && model_name=uie-base-en dataset_name=en_bio/en_bio bash scripts_exp/run_exp.bash
 
 ```
