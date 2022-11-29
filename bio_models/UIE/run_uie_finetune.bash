@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 export batch_size="16"
 export model_name=uie-base-en
-export data_name=absa/14lap
+export data_name=en_bio/en_bio
 export task_name="meta"
 export decoding_format='spotasoc'
 

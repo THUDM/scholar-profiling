@@ -21,9 +21,9 @@ parser.add_argument('--seed', default=2022, type=int)
 args = parser.parse_args()
 
 
-bert_model_path = '/shenyelin/bio_baselines/PLM/bert-base-uncased'
-save_model_path = './outputs2/TEST_BEST.pth'
-device = torch.device("cuda:1")
+bert_model_path = 'bert-base-uncased'
+save_model_path = './outputs/TEST_BEST.pth'
+device = torch.device("cuda:0")
 
 BATCH_SIZE = 16
 ENT_CLS_NUM = 12
@@ -46,14 +46,14 @@ encoder = BertModel.from_pretrained(bert_model_path)
 model = CNNNer(encoder, num_ner_tag=ENT_CLS_NUM, cnn_dim=args.cnn_dim, biaffine_size=args.biaffine_size,
                  size_embed_dim=size_embed_dim, logit_drop=args.logit_drop,
                 kernel_size=kernel_size, n_head=args.n_head, cnn_depth=args.cnn_depth).to(device)
-model.load_state_dict(torch.load(save_model_path, map_location='cuda:1'))
+model.load_state_dict(torch.load(save_model_path, map_location='cuda:0'))
 model.eval()
 
 set_seed(2022)
 
 metrics = MetricsCalculator(ent_thres=ent_thres, allow_nested=True)
 
-ner_test = EntDataset(load_data('/shenyelin/bio_baselines/en_bio/en_bio_test.json'), tokenizer=tokenizer)
+ner_test = EntDataset(load_data('../en_bio/en_bio_test.json'), tokenizer=tokenizer)
 ner_loader_test = DataLoader(ner_test , batch_size=BATCH_SIZE, collate_fn=ner_test.collate, shuffle=False, num_workers=16)
 with torch.no_grad():
     total_X, total_Y, total_Z = [], [], []
