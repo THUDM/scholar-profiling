@@ -7,10 +7,10 @@ from utils.data_loader import EntDataset, load_data
 from torch.utils.data import DataLoader
 from models.GlobalPointer import MetricsCalculator
 
-bert_model_path = '/shenyelin/bio_baselines/PLM/bert-base-uncased' # 模型路径
+bert_model_path = 'bert-base-uncased' # 模型路径
 
 save_model_path = './outputs/TEST_BEST.pth'
-device = torch.device("cuda:1")
+device = torch.device("cuda:0")
 
 max_len = 512 # 256
 ent2id, id2ent = {"gender": 0, "education": 1, "research_interests": 2, "work_record": 3, "take_office": 4, "honorary_title": 5, "highest_education": 6, "work_for": 7, "awards": 8, "birth_place": 9, "birthday": 10, "title": 11}, {}
@@ -19,7 +19,7 @@ for k, v in ent2id.items(): id2ent[v] = k
 tokenizer = BertTokenizerFast.from_pretrained(bert_model_path)
 encoder =BertModel.from_pretrained(bert_model_path)
 model = GlobalPointer(encoder, 12 , 64).to(device)
-model.load_state_dict(torch.load(save_model_path, map_location='cuda:1'))
+model.load_state_dict(torch.load(save_model_path, map_location=device))
 model.eval()
 
 BATCH_SIZE = 16
@@ -29,7 +29,7 @@ set_seed(2022)
 
 metrics = MetricsCalculator()
 
-ner_test = EntDataset(load_data('/shenyelin/bio_baselines/en_bio/en_bio_test.json'), tokenizer=tokenizer)
+ner_test = EntDataset(load_data('../en_bio/en_bio_test.json'), tokenizer=tokenizer)
 ner_loader_test = DataLoader(ner_test , batch_size=BATCH_SIZE, collate_fn=ner_test.collate, shuffle=False, num_workers=16)
 
 with torch.no_grad():

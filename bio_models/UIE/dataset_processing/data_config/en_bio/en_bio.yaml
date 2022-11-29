@@ -1,5 +1,5 @@
 name: en_bio
-path: /shenyelin/bio_baselines/UIE-main/dataset/raw_en_bio
+path: ../dataset/raw_en_bio
 data_class: En_bio
 split:
   train: en_bio_train.json
