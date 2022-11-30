@@ -43,6 +43,7 @@ python predict_CME.py
 cd UIE/dataset_processing
 python uie_convert.py -format spotasoc -config data_config/en_bio -output en_bio
 cd ..
+# specify which gpu to use in scripts_exp/run_exp.bash
 . config/data_conf/base_model_conf_en_bio.ini  && model_name=uie-base-en dataset_name=en_bio/en_bio bash scripts_exp/run_exp.bash
 
 ```
