@@ -73,3 +73,5 @@ python prompt/gender_prompt.py
 python prompt/title_prompt.py
 
 ```
+
+For how to extract more attributes from long texts of scholars' profiles, please see README.md in `bio_models`.
