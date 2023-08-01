@@ -2,6 +2,8 @@ import torch
 import numpy as np
 import torch.nn as nn
 from collections import Counter
+from fastNLP import seq_len_to_mask
+from torch_scatter import scatter_max
 
 class MetricsCalculator(object):
     def __init__(self):
@@ -20,8 +22,6 @@ class MetricsCalculator(object):
 
         for ents, score in zip(ent_target, scores):
             pred_ent = set()
-            score[:, [0, -1]] -= np.inf
-            score[:, :, [0, -1]] -= np.inf
             for l, start, end in zip(*np.where(score > 0)):
                 pred_ent.add((l, start, end))
             ents = set(map(tuple, ents))
@@ -84,11 +84,13 @@ class RawGlobalPointer(nn.Module):
         embeddings = embeddings.to(self.device)
         return embeddings
 
-    def forward(self, input_ids, attention_mask, token_type_ids):
+    def forward(self, input_ids, bpe_len, indexes):
         self.device = input_ids.device
-
-        context_outputs = self.encoder(input_ids, attention_mask, token_type_ids)
-        last_hidden_state = context_outputs[0]
+        attention_mask = seq_len_to_mask(bpe_len)  # bsz x length x length
+        outputs = self.encoder(input_ids, attention_mask=attention_mask, return_dict=True)
+        last_hidden_states = outputs['last_hidden_state']
+        last_hidden_state = scatter_max(last_hidden_states, index=indexes, dim=1)[0][:, 1:]  # bsz x word_len x hidden_size
+        lengths, _ = indexes.max(dim=-1)
 
         batch_size = last_hidden_state.size()[0]
         seq_len = last_hidden_state.size()[1]
@@ -111,7 +113,8 @@ class RawGlobalPointer(nn.Module):
         logits = torch.einsum('bmhd,bnhd->bhmn', qw, kw)
 
         # padding mask
-        pad_mask = attention_mask.unsqueeze(1).unsqueeze(1).expand(batch_size, self.ent_type_size, seq_len, seq_len)
+        mask = seq_len_to_mask(lengths)  # bsz x length x length
+        pad_mask = mask.unsqueeze(1).unsqueeze(1).expand(batch_size, self.ent_type_size, seq_len, seq_len)
         logits = logits * pad_mask - (1 - pad_mask) * 1e12
 
         # 排除下三角
@@ -192,11 +195,14 @@ class EffiGlobalPointer(nn.Module):
         logits = logits - mask * 1e12
         return logits
 
-    def forward(self, input_ids, attention_mask, token_type_ids):
-        self.device = input_ids.device
-        
-        context_outputs = self.encoder(input_ids, attention_mask, token_type_ids)
-        last_hidden_state = context_outputs.last_hidden_state
+    def forward(self, input_ids, bpe_len, indexes):
+
+        attention_mask = seq_len_to_mask(bpe_len)  # bsz x length x length
+        outputs = self.encoder(input_ids, attention_mask=attention_mask, return_dict=True)
+        last_hidden_states = outputs['last_hidden_state']
+        last_hidden_state = scatter_max(last_hidden_states, index=indexes, dim=1)[0][:, 1:]  # bsz x word_len x hidden_size
+        lengths, _ = indexes.max(dim=-1)
+
         outputs = self.dense_1(last_hidden_state)
         qw, kw = outputs[...,::2], outputs[..., 1::2]
         if self.RoPE:
@@ -212,5 +218,6 @@ class EffiGlobalPointer(nn.Module):
         logits = torch.einsum('bmd,bnd->bmn', qw, kw) / self.inner_dim**0.5
         bias = torch.einsum('bnh->bhn', self.dense_2(outputs)) / 2
         logits = logits[:, None] + bias[:, ::2, None] + bias[:, 1::2, :, None]
-        logits = self.add_mask_tril(logits, mask=attention_mask)
+        mask = seq_len_to_mask(lengths)
+        logits = self.add_mask_tril(logits, mask=mask)
         return logits
