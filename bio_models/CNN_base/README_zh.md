@@ -10,14 +10,20 @@
 
 ### 运行
 
-1. 需要修改train_CME.py和predict_CME.py中预训练语言模型以及数据的路径
+1. 需要修改train_CNN.py和predict_CNN.py中预训练语言模型以及数据的路径
 
 2. 可调整的参数有b(BATCH_SIZE)、lr、n(EPOCH)、cnn_dim、biaffine_size、n_head、logit_drop、cnn_depth、max_len
+   
+3. train_CNN_ds.py为单机多卡训练文件（基于deepspeed实现）
 
 #### train
 
 ```python
 python train_CNN.py -n 30 --lr 7e-6 --cnn_dim 120 --biaffine_size 200 --n_head 5 -b 16 --logit_drop 0.1 --cnn_depth 3
+```
+
+```python
+deepspeed --include=localhost:0,4 --master_port 16786 train_CNN_ds.py -n 30 --lr 7e-6 --cnn_dim 120 --biaffine_size 200 --n_head 5 -b 8 --logit_drop 0.1 --cnn_depth 3
 ```
 
 #### predict
