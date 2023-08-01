@@ -10,19 +10,20 @@ class MetricsCalculator(object):
 
     def get_sample_f1(self, y_pred, y_true):
         y_pred = torch.gt(y_pred, 0).float()
+
         return 2 * torch.sum(y_true * y_pred) / torch.sum(y_true + y_pred)
 
     def get_sample_precision(self, y_pred, y_true):
         y_pred = torch.gt(y_pred, 0).float()
         return torch.sum(y_pred[y_true == 1]) / (y_pred.sum() + 1)
     
-    def get_evaluate_fpr(self, scores, ent_target, masks):
+    def get_evaluate_fpr(self, scores, ent_target, word_len):
         X, Y, Z = [], [], []
         ent_scores = scores.sigmoid()  # bsz x max_len x max_len x num_class
-        ent_scores = (ent_scores + ent_scores.transpose(1, 2))/2 # 同时使用下三角的分数
+        ent_scores = (ent_scores + ent_scores.transpose(1, 2))/2
         span_pred = ent_scores.max(dim=-1)[0]
 
-        span_ents = decode(span_pred, masks, allow_nested=self.allow_nested, thres=self.ent_thres) # 解码
+        span_ents = decode(span_pred, word_len, allow_nested=self.allow_nested, thres=self.ent_thres)
         for ents, span_ent, ent_pred in zip(ent_target, span_ents, ent_scores.cpu().numpy()):
             pred_ent = set()
             for s, e, l in span_ent:
@@ -34,7 +35,7 @@ class MetricsCalculator(object):
             X.extend(ents)
             Y.extend(pred_ent)
             Z.extend([pre_entity for pre_entity in pred_ent if pre_entity in ents])
-
+            
         return X, Y, Z
 
     def compute(self, origin, found, right):
@@ -48,7 +49,7 @@ class MetricsCalculator(object):
         id2ent = {}
         for k, v in ent2id.items(): id2ent[v] = k
         class_info = {}
-        # 
+        
         origin_counter = Counter([id2ent[x[-1]] for x in origins])
         found_counter = Counter([id2ent[x[-1]] for x in founds])
         right_counter = Counter([id2ent[x[-1]] for x in rights])
@@ -63,7 +64,14 @@ class MetricsCalculator(object):
         right = len(rights)
         recall, precision, f1 = self.compute(origin, found, right)
         return {'acc': precision, 'recall': recall, 'f1': f1, 'origin': origin, 'found': found, 'right': right}, class_info
-    
+
+def _compute_f_rec_pre(tp, rec, pre):
+    pre = tp/(pre+1e-6)
+    rec = tp/(rec+1e-6)
+    f = 2*pre*rec/(pre+rec+1e-6)
+    return round(f*100, 2), round(rec*100, 2), round(pre*100, 2)
+
+
 def _spans_from_upper_triangular(seq_len: int):
     """Spans from the upper triangular area.
     """
@@ -71,13 +79,13 @@ def _spans_from_upper_triangular(seq_len: int):
         for end in range(start, seq_len):
             yield (start, end)
 
-# 按token解码
-def decode(scores, masks, allow_nested=False, thres=0.5):
+
+def decode(scores, length, allow_nested=False, thres=0.5):
     batch_chunks = []
-    for idx, (curr_scores, mask) in enumerate(zip(scores, masks)):
-        curr_len = int(sum(mask))
+    for idx, (curr_scores, curr_len) in enumerate(zip(scores, length.cpu().tolist())):
         curr_non_mask = scores.new_ones(curr_len, curr_len, dtype=bool).triu()
         tmp_scores = curr_scores[:curr_len, :curr_len][curr_non_mask].cpu().numpy()  # -1 x 2
+
         confidences, label_ids = tmp_scores, tmp_scores>=thres
         labels = [i for i in label_ids]
         chunks = [(label, start, end) for label, (start, end) in zip(labels, _spans_from_upper_triangular(curr_len)) if label != 0]
@@ -86,7 +94,6 @@ def decode(scores, masks, allow_nested=False, thres=0.5):
         assert len(confidences) == len(chunks)
         chunks = [ck for _, ck in sorted(zip(confidences, chunks), reverse=True)]
         chunks = filter_clashed_by_priority(chunks, allow_nested=allow_nested)
-
         if len(chunks):
             batch_chunks.append(set([(s, e, l) for l,s,e in chunks]))
         else:
@@ -118,3 +125,4 @@ def filter_clashed_by_priority(chunks, allow_nested: bool=True):
             filtered_chunks.append(ck)
 
     return filtered_chunks
+
