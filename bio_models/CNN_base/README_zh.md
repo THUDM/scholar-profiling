@@ -28,5 +28,5 @@ python predict_CNN.py --cnn_dim 120 --biaffine_size 200 --n_head 5 --logit_drop 
 
 ### 效果
 
-预训练语言模型为bert-base，总的f1值为45.09177(三次随机种子取平均)
+基于词对匹配，预训练语言模型为bert-base，总的f1值为45.09177(三次随机种子取平均)
 
