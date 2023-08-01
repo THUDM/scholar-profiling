@@ -31,8 +31,9 @@ Place the uie-base model in `hf_models` folder.
 ```bash
 # CNN
 cd CNN_base
-python train_CNN.py -n 30 --lr 7e-6 --cnn_dim 120 --biaffine_size 200 --n_head 5 -b 16 --logit_drop 0.1 --cnn_depth 2  
-python predict_CNN.py --cnn_dim 120 --biaffine_size 200 --n_head 5 --logit_drop 0.1 --cnn_depth 2
+python train_CNN.py -n 30 --lr 7e-6 --cnn_dim 120 --biaffine_size 200 --n_head 5 -b 16 --logit_drop 0.1 --cnn_depth 3
+deepspeed --include=localhost:0,4 --master_port 16786 train_CNN_ds.py -n 30 --lr 7e-6 --cnn_dim 120 --biaffine_size 200 --n_head 5 -b 8 --logit_drop 0.1 --cnn_depth 3
+python predict_CNN.py --cnn_dim 120 --biaffine_size 200 --n_head 5 --logit_drop 0.1 --cnn_depth 3
 
 # EGPointer
 cd EGPointer
