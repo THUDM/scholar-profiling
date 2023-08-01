@@ -30,4 +30,5 @@ python predict_CME.py
 
 ### 效果
 
-采用EffiGlobalPointer，预训练语言模型为bert-base，总的f1值为0.429868
+采用EffiGlobalPointer，词对匹配方式，预训练语言模型为bert-base，f1值为40.39387(三次随机种子取平均)
+
