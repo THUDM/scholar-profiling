@@ -17,15 +17,16 @@
 #### train
 
 ```python
-python train_CNN.py -n 30 --lr 7e-6 --cnn_dim 120 --biaffine_size 200 --n_head 5 -b 16 --logit_drop 0.1 --cnn_depth 2
+python train_CNN.py -n 30 --lr 7e-6 --cnn_dim 120 --biaffine_size 200 --n_head 5 -b 16 --logit_drop 0.1 --cnn_depth 3
 ```
 
 #### predict
 
 ```
-python predict_CNN.py --cnn_dim 120 --biaffine_size 200 --n_head 5 --logit_drop 0.1 --cnn_depth 2
+python predict_CNN.py --cnn_dim 120 --biaffine_size 200 --n_head 5 --logit_drop 0.1 --cnn_depth 3
 ```
 
 ### 效果
 
-预训练语言模型为bert-base，总的f1值为0.458092
+预训练语言模型为bert-base，总的f1值为45.09177(三次随机种子取平均)
+
