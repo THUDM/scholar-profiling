@@ -5,48 +5,53 @@ import torch
 from models.GlobalPointer import EffiGlobalPointer, MetricsCalculator
 from tqdm import tqdm
 from utils.logger import logger
-from utils.bert_optimization import BertAdam
 from transformers import set_seed
+from transformers import get_linear_schedule_with_warmup
 
-bert_model_path = 'bert-base-uncased' # 模型路径
-train_cme_path = '../en_bio/en_bio_train.json'  #CMeEE 训练集
-eval_cme_path = '../en_bio/en_bio_val.json'  #CMeEE 测试集
-device = torch.device("cuda:0")
+import os
+os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+
+bert_model_path = '/data1/zhangfanjin/cyl/bio_baselines/PLM/bert-base-uncased'
+train_cme_path = '/data1/zhangfanjin/cyl/bio_baselines/en_bio/new_en_bio_train.json'
+eval_cme_path = '/data1/zhangfanjin/cyl/bio_baselines/en_bio/new_en_bio_val.json'
+device = torch.device("cuda")
 
 BATCH_SIZE = 16
 ENT_CLS_NUM = 12 # 分类数量
 
-set_seed(2022)
+set_seed(2333)
 #tokenizer
 tokenizer = BertTokenizerFast.from_pretrained(bert_model_path, do_lower_case=True)
 
 # train_data and val_data
 ner_train = EntDataset(load_data(train_cme_path), tokenizer=tokenizer)
-ner_loader_train = DataLoader(ner_train , batch_size=BATCH_SIZE, collate_fn=ner_train.collate, shuffle=True, num_workers=16)
+ner_loader_train = DataLoader(ner_train , batch_size=BATCH_SIZE, collate_fn=ner_train.collate, shuffle=True, num_workers=0)
 ner_evl = EntDataset(load_data(eval_cme_path), tokenizer=tokenizer)
-ner_loader_evl = DataLoader(ner_evl , batch_size=BATCH_SIZE, collate_fn=ner_evl.collate, shuffle=False, num_workers=16)
+ner_loader_evl = DataLoader(ner_evl , batch_size=BATCH_SIZE, collate_fn=ner_evl.collate, shuffle=False, num_workers=0)
 
 #GP MODEL
 encoder = BertModel.from_pretrained(bert_model_path)
 model = EffiGlobalPointer(encoder, ENT_CLS_NUM, 64).to(device) # 12个实体类型
 
 #optimizer
-def set_optimizer( model, train_steps=None):
+def set_optimizer(model):
     param_optimizer = list(model.named_parameters())
     param_optimizer = [n for n in param_optimizer if 'pooler' not in n[0]]
     no_decay = ['bias', 'LayerNorm.bias', 'LayerNorm.weight']
     optimizer_grouped_parameters = [
-        {'params': [p for n, p in param_optimizer if not any(nd in n for nd in no_decay)],
+        {'params': [p for n, p in param_optimizer if not any(nd in n for nd in no_decay)], 'lr': 4e-5, 
          'weight_decay': 0.01},
-        {'params': [p for n, p in param_optimizer if any(nd in n for nd in no_decay)], 'weight_decay': 0.0}
+        {'params': [p for n, p in param_optimizer if any(nd in n for nd in no_decay)], 'lr': 4e-5, 'weight_decay': 0.0}
     ]
-    optimizer = BertAdam(optimizer_grouped_parameters,
-                         lr=4e-5, # 2e-5
-                         warmup=0.1,
-                         t_total=train_steps)
+
+    optimizer = torch.optim.AdamW(optimizer_grouped_parameters)
+
     return optimizer
 EPOCH = 30 # 10
-optimizer = set_optimizer(model, train_steps= (int(len(ner_train) / BATCH_SIZE) + 1) * EPOCH)
+optimizer = set_optimizer(model)
+total_steps = (int(len(ner_train) / BATCH_SIZE) + 1) * EPOCH
+scheduler = get_linear_schedule_with_warmup(optimizer, num_warmup_steps = 0.1 * total_steps, num_training_steps = total_steps)
+
 
 # 根据attentionmask处理mask
 def multilabel_categorical_crossentropy(y_pred, y_true):
@@ -84,13 +89,16 @@ max_f, max_recall = 0.0, 0.0
 for eo in range(EPOCH):
     total_loss, total_f1 = 0., 0.
     for idx, batch in enumerate(ner_loader_train):
-        raw_text_list, input_ids, attention_mask, segment_ids, labels, spoes = batch
-        input_ids, attention_mask, segment_ids, labels = input_ids.to(device), attention_mask.to(device), segment_ids.to(device), labels.to(device)
-        logits = model(input_ids, attention_mask, segment_ids)
+
+        input_ids, indexes, bpe_len, word_len, labels, ent_target = batch
+        input_ids, bpe_len, indexes, labels = input_ids.cuda(), bpe_len.cuda(), indexes.cuda(), labels.cuda()
+        logits = model(input_ids, bpe_len, indexes)
         loss = loss_fun(logits, labels)
         optimizer.zero_grad()
         loss.backward()
+        torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=5) # 0.25
         optimizer.step()
+        scheduler.step()
         sample_f1 = metrics.get_sample_f1(logits, labels)
         total_loss+=loss.item()
         total_f1 += sample_f1.item()
@@ -104,10 +112,10 @@ for eo in range(EPOCH):
         total_X, total_Y, total_Z = [], [], []
         model.eval()
         for batch in tqdm(ner_loader_evl, desc="Valing"):
-            raw_text_list, input_ids, attention_mask, segment_ids, labels, ent_target = batch
-            input_ids, attention_mask, segment_ids, labels = input_ids.to(device), attention_mask.to(
-                device), segment_ids.to(device), labels.to(device)
-            logits = model(input_ids, attention_mask, segment_ids).data.cpu().numpy()
+
+            input_ids, indexes, bpe_len, word_len, labels, ent_target = batch
+            input_ids, bpe_len, indexes, labels = input_ids.cuda(), bpe_len.cuda(), indexes.cuda(), labels.cuda()
+            logits = model(input_ids, bpe_len, indexes).data.cpu().numpy()
 
             f1, p, r = metrics.get_evaluate_fpr(logits, ent_target)
             total_X.extend(f1)
@@ -117,7 +125,7 @@ for eo in range(EPOCH):
         eval_info, entity_info = metrics.result(total_X, total_Y, total_Z)
         f = round(eval_info['f1'],6)
         # 打印总的以及每个类别的评价指标
-        logger.info('\nEval  precision:{0}  recall:{1}  f1:{2}  origin:{3}  found:{4}  right:{5}'.format(round(eval_info['acc'],6), round(eval_info['recall'],6), round(eval_info['f1'],6), eval_info['origin'], eval_info['found'], eval_info['right']))
+        logger.info('\nEval{6}  precision:{0}  recall:{1}  f1:{2}  origin:{3}  found:{4}  right:{5}'.format(round(eval_info['acc'],6), round(eval_info['recall'],6), round(eval_info['f1'],6), eval_info['origin'], eval_info['found'], eval_info['right'], eo))
         for item in entity_info.keys():
             logger.info('-- item:  {0}  precision:{1}  recall:{2}  f1:{3}  origin:{4}  found:{5}  right:{6}'.format(item, round(entity_info[item]['acc'],6), round(entity_info[item]['recall'],6), round(entity_info[item]['f1'],6), entity_info[item]['origin'], entity_info[item]['found'], entity_info[item]['right']))
         torch.save(model.state_dict(), './outputs/TEST_EP_L{}.pth'.format(eo))
