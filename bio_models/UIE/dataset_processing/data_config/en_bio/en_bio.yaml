@@ -1,31 +1,21 @@
 name: en_bio
-path: ../dataset/raw_en_bio
+path: /data1/zhangfanjin/cyl/bio_baselines/en_bio
 data_class: En_bio
 split:
-  train: en_bio_train.json
-  val: en_bio_val.json
-  test: en_bio_test.json
+  train: new_en_bio_train.json
+  val: new_en_bio_val.json
+  test: new_en_bio_test.json
 language: en
 mapper:
-  work_for: work for
-  title: title 
-  nationality: nationality
-  gender: gender
-  birth_place: birth place
-  birthday: birthday
-  date_of_death: date of death
-  cause_of_death: cause of death
-  nation: nation
-  highest_education: highest education
-  research_interests: research interests
-  honorary_title: honorary title
-  awards: awards
-  education: education
-  work_record: work record
-  take_office: take office
-  academic_works: academic works
-  journal: journal
-  project: project
-  student: student
-  tutor: tutor
-  party: party
+  work_for: Institution of employment
+  title: Title 
+  gender: Gender
+  birth_place: Place of birth
+  birthday: Date of birth
+  highest_education: Highest education
+  research_interests: Field of study
+  honorary_title: Honors
+  awards: Awards
+  education: Educational information
+  work_record: Work history
+  take_office: Social employment
