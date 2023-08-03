@@ -22,10 +22,10 @@ class En_bio(TaskFormat):
         super().__init__(
             language=language
         )
-        self.doc_id = doc_json['docid']
+        # self.doc_id = doc_json['docid']
         # self.sent_id = doc_json['text']
-        self.tokens = doc_json['tokens']
-        self.entities = doc_json['ner'] # entity_mentions
+        self.tokens = doc_json["text"]
+        self.entities = doc_json["entity"] # entity_mentions
         # self.relations = doc_json['relation_mentions']
         # self.events = doc_json['event_mentions']
 
@@ -33,8 +33,9 @@ class En_bio(TaskFormat):
         entities = dict()
 
         for idex, span in enumerate(self.entities):
-            span_start, span_end, label = span[0], span[1], span[2]
+            span_start, span_end, entity, label = span[0], span[1], span[2], span[3] # start, end, entity, label
             tokens = self.tokens[span_start: span_end]
+            assert tokens == entity, entity
             indexes = list(range(span_start, span_end))
             entities[(span_start, span_end, label)] = Entity(
                 span=Span(
@@ -50,8 +51,7 @@ class En_bio(TaskFormat):
             tokens=self.tokens,
             entities=entities.values(),
             relations=list(),
-            events=list(),
-            text_id=self.doc_id
+            events=list()
         )
 
     @staticmethod
