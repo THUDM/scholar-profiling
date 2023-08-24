@@ -33,12 +33,7 @@ class CFG:
     model_name='roberta'
     
     seed=25
-    
-    # cnn
-    num_filters=128
-    filter_sizes=[3,4,5]
-    is_cnn=False
-    
+        
     warmup_rate=0.1
     batch_size=32
     max_length=128
@@ -112,24 +107,14 @@ class MyDataset(Dataset):
 
 # 模型定义
 class Deberta(nn.Module):
-    def __init__(self,ptm_path,classes,num_filters,filter_sizes,is_cnn=False) -> None:
+    def __init__(self,ptm_path,classes) -> None:
         super().__init__()
         
         self.bert=AutoModel.from_pretrained(ptm_path)
         self.config=AutoConfig.from_pretrained(ptm_path)
         
-        self.is_cnn=is_cnn
-        if self.is_cnn:
-            for param in self.bert.parameters():
-                param.requires_grad=False
-        
-        self.convs = nn.ModuleList([nn.Conv2d(1, num_filters, (fs, self.bert.config.hidden_size)) for fs in filter_sizes])
         self.dropout=nn.Dropout(self.config.hidden_dropout_prob)
-        
-        if self.is_cnn:
-            self.linear=nn.Linear(num_filters * len(filter_sizes), classes)
-        else:
-            self.linear=nn.Linear(self.config.hidden_size,classes)        
+        self.linear=nn.Linear(self.config.hidden_size,classes)        
     
     def forward(self,input):
         
@@ -137,30 +122,10 @@ class Deberta(nn.Module):
         
         last_hidden_state=outputs.last_hidden_state # [batch_size,seq_len,hidden]
         
-        if self.is_cnn:
-            # pooled_output = outputs.pooler_output  # 获取CLS位置的向量表示
-        
-            x = last_hidden_state.unsqueeze(1)  # 为卷积操作增加维度
-            x = [relu(conv(x)).squeeze(3) for conv in self.convs]  # 卷积操作和激活函数
-            x = [F.max_pool1d(conv, conv.size(2)).squeeze(2) for conv in x]  # 最大池化
-            x = torch.cat(x, 1)  # 拼接不同尺寸卷积的池化结果
-            x = self.dropout(x)
-            logits = self.linear(x)  # 全连接层
-        else:
-            
-            # hidden_state=outputs.hidden_states
-            # first=hidden_state[1]
-            # last=hidden_state[-1]
-            # first_avg=torch.mean(first,dim=1,keepdim=True)
-            # last_avg=torch.mean(last,dim=1,keepdim=True)
-            # avg=torch.cat((first_avg,last_avg),dim=1)
-            # output=torch.mean(avg,dim=1)
-            
-            output=last_hidden_state[:,0,:] # 取CLStoken 的向量
-            # output=torch.mean(last_hidden_state,dim=1) # [batch_size,hidden]
-            output = self.dropout(output)
-            logits=self.linear(output)                 # [bath_size,classes]
-        
+        output=last_hidden_state[:,0,:] # 取CLStoken 的向量
+        output = self.dropout(output)
+        logits=self.linear(output)                 # [bath_size,classes]
+    
         return logits
 
 def eval(model,val_loader):
@@ -196,7 +161,7 @@ def main():
     
     train_loader=DataLoader(train_dataset,batch_size=CFG.batch_size,shuffle=True)
     val_loader=DataLoader(val_dataset,batch_size=CFG.batch_size,shuffle=True)
-    model=Deberta(CFG.ptm_path,CFG.classes,CFG.num_filters,CFG.filter_sizes,is_cnn=CFG.is_cnn)
+    model=Deberta(CFG.ptm_path,CFG.classes)
 
     criterion=nn.CrossEntropyLoss()
 
