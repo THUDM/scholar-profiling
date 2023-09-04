@@ -14,9 +14,14 @@ save/
 chatglm/output
 chatglm/predict
 
+deberta/log
+deberta/data
+deberta/__pycache__
+
 llama/log
 llama/output
 llama/predict
+
 
 figs/
 results/
