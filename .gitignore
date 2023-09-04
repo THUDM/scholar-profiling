@@ -11,6 +11,13 @@ output/
 pretrain_models/
 save/
 
+chatglm/output
+chatglm/predict
+
+llama/log
+llama/output
+llama/predict
+
 figs/
 results/
 *.json
