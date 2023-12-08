@@ -25,10 +25,10 @@ pip install -r requirements.txt
 
 ### Dataset
 
-The dataset can be downloaded from [BaiduPan](https://pan.baidu.com/s/1rpwjKInye7ZptmvkmDTPww) (with password 7lro). There are three parts as follows:
-- data_ex.zip: unzip the file and put the _data_ directory into project directory.
-- pretrain_models.zip: unzip the file and put the _pretrain_models_ directory into project directory.
-- googleSearch: use _7z_ to extract data.zip in this folder and put the _googleSearch_ directory in the _data_ directory.
+The dataset can be downloaded from [BaiduPan](https://pan.baidu.com/s/1rpwjKInye7ZptmvkmDTPww) (with password 7lro) or Aliyun. There are three parts as follows:
+- data_ex.zip [[Aliyun Link]](https://open-data-set.oss-cn-beijing.aliyuncs.com/oag-benchmark/scholar-profiling/data_ex.zip): unzip the file and put the _data_ directory into project directory.
+- pretrain_models.zip [[Aliyun Link]](https://open-data-set.oss-cn-beijing.aliyuncs.com/oag-benchmark/scholar-profiling/pretrain_models.zip): unzip the file and put the _pretrain_models_ directory into project directory.
+- googleSearch: use _7z_ to extract data.zip in this folder and put the _googleSearch_ directory in the _data_ directory. [[Aliyun Link1]](https://open-data-set.oss-cn-beijing.aliyuncs.com/oag-benchmark/scholar-profiling/googleSearch/data.z01), [[Aliyun Link2]](https://open-data-set.oss-cn-beijing.aliyuncs.com/oag-benchmark/scholar-profiling/googleSearch/data.z02), [[Aliyun Link3]](https://open-data-set.oss-cn-beijing.aliyuncs.com/oag-benchmark/scholar-profiling/googleSearch/data.z03), [[Aliyun Link4]](https://open-data-set.oss-cn-beijing.aliyuncs.com/oag-benchmark/scholar-profiling/googleSearch/data.z04), [[Aliyun Link5]](https://open-data-set.oss-cn-beijing.aliyuncs.com/oag-benchmark/scholar-profiling/googleSearch/data.z05), [[Aliyun Link6]](https://open-data-set.oss-cn-beijing.aliyuncs.com/oag-benchmark/scholar-profiling/googleSearch/data.z06), [[Aliyun Link7]](https://open-data-set.oss-cn-beijing.aliyuncs.com/oag-benchmark/scholar-profiling/googleSearch/data.z07), [[Aliyun Link8]](https://open-data-set.oss-cn-beijing.aliyuncs.com/oag-benchmark/scholar-profiling/googleSearch/data.z08), [[Aliyun Link9]](https://open-data-set.oss-cn-beijing.aliyuncs.com/oag-benchmark/scholar-profiling/googleSearch/data.zip)
 
 ## How to run
 ```bash
