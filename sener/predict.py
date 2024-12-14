@@ -25,7 +25,7 @@ def main(args, seed, mode="test"):
         ent2id = {"Method": 0, "Task": 1, "Material":2, "Metric": 3}
     elif args.task == "profiling-07":
         eval_cme_path = "./data/profiling-07/{}.json".format(mode)
-        save_model_path = './outputs/profiling-07_{}.pth'.format(seed)
+        save_model_path = './outputs/profiling-07_5120_{}.pth'.format(seed)
         ENT_CLS_NUM = 13
         ent2id = {"interests": 0, "degree": 1, "address":2, "affiliation": 3, "date":4, "major":5, "univ":6, "email":7, "fax":8, "phone":9, "position":10, "contactinfo":11, "education":12}
     
