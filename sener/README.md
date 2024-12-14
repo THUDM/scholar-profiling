@@ -1,20 +1,54 @@
-# SeNER
-This is the code for "Small Language Model Makes an Effective Long Text Extractor"
+<div align="center">
 
-## Requirements
+# Small Language Model Makes an Effective Long Text Extractor(AAAI 2025)
+
+</div>
+
+![image](./assets/sener.pdf)
+
+*Official code and data of the paper Small Language Model Makes an Effective Long Text Extractor.*
+
+<p align="center">
+   📃 <a href="https://arxiv.org/abs/2411.02337" target="_blank"> Paper </a> | 🤗 <a href="https://huggingface.co/THUDM/webrl-glm-4-9b" target="_blank"> WebRL-GLM-4-9B </a> | <a href="https://huggingface.co/THUDM/webrl-llama-3.1-8b" target="_blank"> WebRL-LLaMA-3.1-8B </a> | <a href="https://www.modelscope.cn/collections/WebRL-77a3e54a2dde4b" target="_blank"> ModelScope </a>
+</p>
+
+***
+
+SeNER, a lightweight span-based NER method with efficient attention mechanisms that enhance long-text encoding and extraction, reduce redundant computations, and achieve state-of-the-art accuracy while being GPU-memory-friendly. 
+
+## 🚀 Quick Start
+
+### Dependencies
+
+First, create a conda environment and install all pip package requirements.
+
+```bash
+conda create -n sener python==3.11.9
+conda activate sener
+
+cd scholar-profiling/sener
+pip install -r requirements.txt
 ```
-python==3.11.9 
-fastNLP==1.0.1
-transformers==4.37.2                   
-pytorch==2.3.1
-deepspeed==0.13.4
-peft==0.11.1
-sentencepiece==0.2.0
-```
 
-## File structure
+### Model checkpoints
 
-You need to put your data in the parallel folder of this repo.
+The checkpoints has been released here and we use it:
+
+- [scholar-xl checkpoint](https://huggingface.co/THUDM/webrl-glm-4-9b)
+- [SciREX checkpoint](https://huggingface.co/THUDM/webrl-llama-3.1-8b)
+- [profiling-07 checkpoint](https://huggingface.co/THUDM/webrl-llama-3.1-70b)
+
+### Model checkpoints
+
+The processed data has been released here. We download it and put it in ./data:
+
+- [scholar-xl data](https://huggingface.co/THUDM/webrl-glm-4-9b)
+- [SciREX data](https://huggingface.co/THUDM/webrl-llama-3.1-8b)
+- [profiling-07 data](https://huggingface.co/THUDM/webrl-llama-3.1-70b)
+
+### File structure
+
+You can follow a similar format for processing your data, and then go on to train your own model.
 
 ```tree
     - data/
@@ -30,6 +64,7 @@ You need to put your data in the parallel folder of this repo.
         - metrics.py
         - model.py
     - outputs
+    - PLM
     - utils/
         - data_loader.py
         - logger.py
@@ -40,14 +75,21 @@ You need to put your data in the parallel folder of this repo.
 
 ```
 
-## train
+### ✈️ Train model
 
-```text
-sh ./train.sh
+We use Deberta-v3-large as the backbone. You can train SeNER with the following commands:
+
+```bash
+bash train.sh
 ```
 
-## predict
+### 🛜 Evaluation
 
-```text
-sh ./predict.sh
+```bash
+bash train.sh
+```
+
+## Citation
+```
+...
 ```
