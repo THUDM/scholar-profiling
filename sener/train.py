@@ -247,13 +247,13 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    # seed = random.sample(range(1000,10000),3)
-    seed = [2288, 3618, 4937]
+    seed = random.sample(range(1000,10000),3)
+    # seed = [2288, 3618, 4937]
 
     max_len = [5120] 
 
     for l in max_len:
-        for idx in range(3):
+        for idx in range(len(seed)):
             main(args, int(seed[idx]), int(l))
             clean_cache()
     
