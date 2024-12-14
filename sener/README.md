@@ -1,6 +1,6 @@
 <div align="center">
 
-# Small Language Model Makes an Effective Long Text Extractor(AAAI 2025)
+# Small Language Model Makes an Effective Long Text Extractor (AAAI 2025)
 
 </div>
 
