@@ -4,7 +4,7 @@
 
 </div>
 
-![image](./sener/assets/sener.pdf)
+![image](./assets/sener.png)
 
 *Official code and data of the paper Small Language Model Makes an Effective Long Text Extractor.*
 
