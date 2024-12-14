@@ -42,9 +42,9 @@ The checkpoints has been released here and we use it:
 
 The processed data has been released here. We download it and put it in ./data:
 
-- [scholar-xl data](https://huggingface.co/THUDM/webrl-glm-4-9b)
-- [SciREX data](https://huggingface.co/THUDM/webrl-llama-3.1-8b)
-- [profiling-07 data](https://huggingface.co/THUDM/webrl-llama-3.1-70b)
+- [scholar-xl data](./data/scholar-xl)
+- [SciREX data](./data/SciREX)
+- [profiling-07 data](./data/profiling-07)
 
 ### File structure
 
