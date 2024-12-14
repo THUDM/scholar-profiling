@@ -9,7 +9,7 @@
 *Official code and data of the paper Small Language Model Makes an Effective Long Text Extractor.*
 
 <p align="center">
-   📃 <a href="https://arxiv.org/abs/2411.02337" target="_blank"> Paper </a> | 🤗 <a href="https://huggingface.co/THUDM/webrl-glm-4-9b" target="_blank"> WebRL-GLM-4-9B </a> | <a href="https://huggingface.co/THUDM/webrl-llama-3.1-8b" target="_blank"> WebRL-LLaMA-3.1-8B </a> | <a href="https://www.modelscope.cn/collections/WebRL-77a3e54a2dde4b" target="_blank"> ModelScope </a>
+   📃 <a href="https://arxiv.org/abs/2411.02337" target="_blank"> Paper </a> 
 </p>
 
 ***
