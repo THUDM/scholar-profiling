@@ -4,7 +4,10 @@
 
 </div>
 
-![image](./assets/sener.png)
+
+<div align="center">
+    <img src=assets/sener.png width=50% />
+</div>
 
 *Official code and data of the paper Small Language Model Makes an Effective Long Text Extractor.*
 
