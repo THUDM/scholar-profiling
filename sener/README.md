@@ -94,5 +94,10 @@ bash train.sh
 
 ## Citation
 ```
-...
+@inproceedings{chen2025small,
+  title={Small Language Model Makes an Effective Long Text Extractor},
+  author={Chen, Yelin and Zhang, Fanjin and Tang, Jie},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  year={2025}
+}
 ```
