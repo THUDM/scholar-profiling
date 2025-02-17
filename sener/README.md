@@ -12,7 +12,7 @@
 *Official code and data of the paper Small Language Model Makes an Effective Long Text Extractor.*
 
 <p align="center">
-   📃 <a href="https://arxiv.org/abs/2411.02337" target="_blank"> Paper </a> 
+   📃 <a href="https://arxiv.org/pdf/2502.07286" target="_blank"> Paper </a> 
 </p>
 
 ***
