@@ -80,6 +80,12 @@ For how to extract more attributes from long texts of scholars' profiles, please
 ## References
 🌟 If you find our work helpful, please leave us a star and cite our paper.
 ```
+@inproceedings{chen2025small,
+  title={Small Language Model Makes an Effective Long Text Extractor},
+  author={Chen, Yelin and Zhang, Fanjin and Tang, Jie},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  year={2025}
+}
 @inproceedings{zhang2024oag,
   title={OAG-bench: a human-curated benchmark for academic graph mining},
   author={Fanjin Zhang and Shijie Shi and Yifan Zhu and Bo Chen and Yukuo Cen and Jifan Yu and Yelin Chen and Lulu Wang and Qingfei Zhao and Yuqing Cheng and Tianyi Han and Yuwei An and Dan Zhang and Weng Lam Tam and Kun Cao and Yunhe Pang and Xinyu Guan and Huihui Yuan and Jian Song and Xiaoyan Li and Yuxiao Dong and Jie Tang},
