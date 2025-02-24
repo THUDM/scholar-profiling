@@ -37,9 +37,9 @@ pip install -r requirements.txt
 
 The checkpoints has been released here and we use it:
 
-- [scholar-xl checkpoint](https://drive.google.com/file/d/1EZAp5N--a5aWvxL_dGIGnRoG9TSSpyyB/view?usp=sharing) [huggingface](https://huggingface.co/datasets/QAQ123/Scholar-XL/tree/main)
-- [SciREX checkpoint](https://drive.google.com/file/d/1f4GHfMxw0yESEKoz1R2Nr0QAzpbZwFgo/view?usp=sharing) [huggingface](https://huggingface.co/datasets/QAQ123/SciREX/tree/main)
-- [profiling-07 checkpoint](https://drive.google.com/file/d/1w3YiRi_g6UgLPey6CCEgv_fdRZR_P9YH/view?usp=sharing) [huggingface](https://huggingface.co/datasets/QAQ123/Profiling-07/tree/main)
+- [scholar-xl checkpoint](https://drive.google.com/file/d/1EZAp5N--a5aWvxL_dGIGnRoG9TSSpyyB/view?usp=sharing)    [huggingface](https://huggingface.co/datasets/QAQ123/Scholar-XL/tree/main)
+- [SciREX checkpoint](https://drive.google.com/file/d/1f4GHfMxw0yESEKoz1R2Nr0QAzpbZwFgo/view?usp=sharing)    [huggingface](https://huggingface.co/datasets/QAQ123/SciREX/tree/main)
+- [profiling-07 checkpoint](https://drive.google.com/file/d/1w3YiRi_g6UgLPey6CCEgv_fdRZR_P9YH/view?usp=sharing)    [huggingface](https://huggingface.co/datasets/QAQ123/Profiling-07/tree/main)
 
 ### Model checkpoints
 
